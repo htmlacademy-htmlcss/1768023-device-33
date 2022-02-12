@@ -423,8 +423,7 @@ body {
 .navigation {
   display: flex;
   width: 1160px;
-  margin-left: 60px;
-  margin-right: 60px;
+  margin: 0 auto;
 }
 
 .navigation-list {
@@ -439,9 +438,10 @@ body {
   margin-bottom: 70px;
 }
 
-.delivery-exclusive-link {
-  display: block;
-  flex-direction: row ;
+.delivery-exclusive-service {
+  display: inline-block;
+  align-items: stretch;
+  justify-content: space-between;
   margin-top: 70px;
   margin-left: 140px;
   margin-right: 140px;
@@ -494,4 +494,17 @@ body {
   margin-right: 140px;
   margin-left: 190px;
   margin-bottom: 65px;
+}
+
+.sorting-filter {
+  display: flex;
+}
+
+.filter-product {
+  width: 320px;
+  margin-right: 40px;
+}
+
+.catalog-right-column {
+  width: 840px;
 }
