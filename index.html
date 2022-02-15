@@ -9,12 +9,14 @@
 
   <header class="page-header">
 
+
     <a class="logo-page-header-link" href="/" title="Переход на главную страницу" id="index.html">
       <img src="images\device-logo.svg" width="145" height="36" alt="Логотип Device">
     </a>
 
 
-    <nav class="navigation-list">
+    <nav class="navigation">
+
       <form class="navigation-product-search" action="https://echo.htmlacademy.ru/" method="get">
         <label>
            <input class="search-product" type="text" name="search" value="Найти товар">
@@ -22,22 +24,22 @@
             <button class="search-product-button" type="submit">Найти</button>
       </form>
 
-    <div class="navigation-container">
+
     <ul class="navigation-list navigation-user">
       <li class="navigation-item">
-        <a class="navigation-link" href="#"><img src="" alt="Войти">Войти</a>
+        <a class="navigation-link" href="#"><img src="#" alt="Войти">Войти</a>
           </li>
         <li class="navigation-item">
-         <a class="navigation-link" href="#"><img src="" alt="Сравнить товары">Сравнить</a>
+         <a class="navigation-link" href="#"><img src="#" alt="Сравнить товары">Сравнить</a>
           </li>
       <li class="navigation-item">
-        <a class="navigation-link" href="#"><img src="" alt="Товары в корзине">Корзина</a>
+        <a class="navigation-link" href="#"><img src="#" alt="Товары в корзине">Корзина</a>
           </li>
       </ul>
-    </div>
 
-    <div class="header-container">
-      <ul class="header-menu-list">
+
+
+      <ul class="navigation-list">
         <li class="header-menu-item">
           <a class="header-catalog-link button" href="catalog.html">Каталог товаров
             <img src="images/header-icons/catalog.svg" width="50" height="50" alt="Каталог товаров">
@@ -53,11 +55,13 @@
           <a class="header-menu-link button" href="#">Контакты</a>
             </li>
         </ul>
-    </div>
     </nav>
   </header>
 
-  <main class="main-index">
+  <main class="main-container main-index">
+
+<div class="page-container">
+
     <h1 class="visually-hidden">Девайс</h1>
 
   <div class="slider-item">
@@ -170,6 +174,7 @@
           </ul>
       </section>
 
+
 <div class="advanteges-container">
   <section class="advanteges">
       <h2 class="visually-hidden">Меню сервиса покупки</h2>
@@ -236,47 +241,45 @@
           </div>
         </section>
 
-
+<div class="index-columns">
   <section class="about">
-    <h2 class="about-company-title">О нас</h2>
-      <p class="about-description">
-        Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.<br>
+    <h2>О нас</h2>
+      <p>
+        Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.
+      </p>
+      <p>
         Мы можем доставить ваш товар в самые отдалённые уголки России транспортными компаниями:
-      <ul class="transport-company">
-        <li class="transport-info">
-          <a class="transport-link">Меловые линии</a>
-        </li>
-        <li class="transport-info">
-          <a class="transport-link">СДИК</a>
-        </li>
-        <li class="transport-info">
-          <a class="transport-link">ТоксБерри</a>
-        </li>
+      <ul>
+        <li> Меловые линии </li>
+        <li> СДИК </li>
+        <li> ТоксБерри </li>
       </ul>
     </p>
 
-    <a class="more-about" href="#">Подробнее о нас</a>
+    <a class="more-about button" href="#">Подробнее о нас</a>
   </section>
 
   <section class="contacts">
-    <h2 class="about-company-title">Контакты</h2>
-      <p class="contacts-text">Вы можете забрать товар сами, заехав в наш офис.
+    <h2>Контакты</h2>
+      <p>Вы можете забрать товар сами, заехав в наш офис.
         Заодно сможете проверить работоспособность покупки. </p>
 
       <address class="contacts-adress">
-        <h3 class="contacts-subtitle">Интернет-магазин «Девайс»</h3>
-          <p class="contacts-adress-text">Санкт-Петербург, набережная реки Карповки, 5, литера П.</p>
+        <h3>Интернет-магазин «Девайс»</h3>
+          <p>Санкт-Петербург, набережная реки Карповки, 5, литера П.
+          </p>
             <a class="contacts-phone" href="tel:+7812812-12-12">+7(812)812-12-12</a>
       </address>
 
-      <h3 class="contacts-subtitle">Время работы</h3>
+      <h3>Время работы</h3>
         <ul class="contacts-schedule">
           <li class="contacts-schedule-item">пн—пт: с 10:00 до 22:00</li>
           <li class="contacts-schedule-item">сб—вс: с 10:00 до 19:00</li>
         </ul>
 
-    <a class="contact-message" href="#">Напишите нам</a>
+    <a class="contact-message button" href="#">Напишите нам</a>
   </section>
+</div>
 
 
 <div class="subscription-container">
@@ -297,11 +300,15 @@
         <p class="postscript-mark">Это бесплатно</p>
     </div>
     </section>
+  </div>
 </main>
-</div>
+
+
 
  <footer class="page-footer">
+  <div class="page-footer-container">
 
+    <div class="contacts-container">
     <a class="logo-page-footer-link" href="#index.html" title="Перейти наверх главной страницы">
       <img src="images/device-logo.svg" width="145" height="36" alt="Логотип Device">
     </a>
@@ -309,6 +316,14 @@
   <section class="footer-content">
     <h2 class="visually-hidden">Содержание нижней части страницы </h2>
       <p class="footer-contacts">Санкт-Петербург, набережная реки Карповки, 5, литера П.</p>
+
+    </div>
+
+
+
+    <section class="footer-social">
+      <div class="footer-social-container">
+
 
     <ul class="footer-menu-list">
       <li class="footer-menu-item">
@@ -322,37 +337,40 @@
       </li>
     </ul>
 
-    <a class="footer-contacts-phone" href="tel:+7812812-12-12">+7 (812) 812-12-12</a>
-
-  </section>
-
-  <section class="footer-social">
     <h2 class="visually-hidden">Контакты на социальные сети</h2>
-      <ul class="footer-social-list">
-        <li class="footer-social-item">
-          <a class="button" href="https://www.facebook.com/htmlacademy">
-            <img src="images/social-network/facebook.svg" width="40" height="40" alt="Иконка Фейсбука">
-            <span class="visually-hidden">Фейсбук</span>
-          </a>
-        </li>
-        <li class="footer-social-item">
-          <a class="button" href="https://www.instagram.com/htmlacademy/">
-            <img src="images/social-network/instagram.svg" width="40" height="40" alt="Иконка Инстаграм">
-            <span class="visually-hidden">Инстаграм</span>
-          </a>
-        </li>
-        <li class="footer-social-item">
-          <a class="button" href="https://twitter.com/htmlacademy_ru">
-            <img src="images/social-network/twitter.svg" width="40" height="40" alt="Иконка Твиттер" >
-            <span class="visually-hidden">Твиттер</span>
+    <ul class="footer-social-list">
+      <li class="footer-social-item">
+        <a class="button" href="https://www.facebook.com/htmlacademy">
+          <img src="images/social-network/facebook.svg" width="40" height="40" alt="Иконка Фейсбука">
+          <span class="visually-hidden">Фейсбук</span>
         </a>
-        </li>
-      </ul>
+      </li>
+      <li class="footer-social-item">
+        <a class="button" href="https://www.instagram.com/htmlacademy/">
+          <img src="images/social-network/instagram.svg" width="40" height="40" alt="Иконка Инстаграм">
+          <span class="visually-hidden">Инстаграм</span>
+        </a>
+      </li>
+      <li class="footer-social-item">
+        <a class="button" href="https://twitter.com/htmlacademy_ru">
+          <img src="images/social-network/twitter.svg" width="40" height="40" alt="Иконка Твиттер" >
+          <span class="visually-hidden">Твиттер</span>
+      </a>
+      </li>
+    </ul>
+
+  </div>
+</section>
+
+  <div class="footer-contacts-container">
+    <a class="footer-contacts-phone" href="tel:+7812812-12-12">+7 (812) 812-12-12</a>
 
     <div class="about-text">
     <a class="htmlacademy-link" href="https://htmlacademy.ru/"><img src="images/academy-logo.svg" width="115" height="33"alt="Переход к HTMLAcademy"></a>
     </div>
+  </div>
   </section>
+</div>
   </footer>
 
   </body>

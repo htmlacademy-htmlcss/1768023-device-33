@@ -8,11 +8,14 @@
 <body>
   <header class="page-header">
 
-    <a class="logo-page-header-link" href="index.html" title="Переход на главную страницу">
+
+    <a class="logo-page-header-link" href="/" title="Переход на главную страницу" id="index.html">
       <img src="images\device-logo.svg" width="145" height="36" alt="Логотип Device">
     </a>
 
-    <nav class="navigation-list">
+
+    <nav class="navigation">
+
       <form class="navigation-product-search" action="https://echo.htmlacademy.ru/" method="get">
         <label>
            <input class="search-product" type="text" name="search" value="Найти товар">
@@ -20,55 +23,56 @@
             <button class="search-product-button" type="submit">Найти</button>
       </form>
 
+
     <ul class="navigation-list navigation-user">
+      <li class="navigation-item" href="#" alt="Иконка пользователя">Коля Петухов</li>
       <li class="navigation-item">
-        <a class="navigation-link" href="#"><img src="" alt="Войти">Войти</a>
+        <a class="navigation-link" href="#">Выйти</a>
           </li>
         <li class="navigation-item">
-         <a class="navigation-link" href="#"><img src="" alt="Сравнить товары">Сравнить</a>
+         <a class="navigation-link" href="#"><img src="#" alt="Сравнить товары">Сравнить</a>
           </li>
       <li class="navigation-item">
-        <a class="navigation-link" href="#"><img src="" alt="Товары в корзине">Корзина</a>
+        <a class="navigation-link" href="#"><img src="#" alt="Товары в корзине">Корзина</a>
           </li>
       </ul>
 
-      <ul class="header-menu-list">
+
+
+      <ul class="navigation-list">
         <li class="header-menu-item">
-          <a class="header-catalog-link" href="catalog.html">Каталог товаров
+          <a class="header-catalog-link button" href="catalog.html">Каталог товаров
             <img src="images/header-icons/catalog.svg" width="50" height="50" alt="Каталог товаров">
           </a>
             </li>
         <li class="header-menu-item">
-          <a class="header-menu-link" href="#">Доставка</a>
+          <a class="header-menu-link button" href="#">Доставка</a>
             </li>
         <li class="header-menu-item">
-          <a class="header-menu-link" href="#">Гарантия</a>
+          <a class="header-menu-link button" href="#">Гарантия</a>
             </li>
         <li class="header-menu-item">
-          <a class="header-menu-link" href="#">Контакты</a>
+          <a class="header-menu-link button" href="#">Контакты</a>
             </li>
         </ul>
     </nav>
   </header>
 
 
-<main class="main-inner">
-
+<main class="main-inner main-container">
+  <div class="page-container">
   <!-- хлебные крошки -->
   <header class="inner-header">
     <h1 class="inner-header-title">Моноподы для селфи</h1>
 
     <ul class="breadcrumbs">
       <li class="breadcrumbs-item">
-        <img src="images/arrow-right.svg" width="4" height="7" alt="Переход к разделу">
         <a class="breadcrumbs-item-link" href="index.html">Главная</a>
       </li>
       <li class="breadcrumbs-item">
-        <img src="images/arrow-right.svg" width="4" height="7" alt="Переход к разделу">
         <a class="breadcrumbs-item-link" href="catalog.html">Каталог товаров</a>
       </li>
       <li class="breadcrumbs-item">
-        <img src="images/arrow-right.svg" width="4" height="7" alt="Переход к разделу">
         <a class="breadcrumbs-item-link">Моноподы для селфи</a>
       </li>
     </ul>
@@ -120,6 +124,7 @@
     </form>
   </section>
 
+  <div class="catalog-right-column">
     <!-- сортировка товара -->
   <section class="sorting">
       <h2 class="sorting-header">Сортировка:</h2>
@@ -129,9 +134,9 @@
   </select>
 
   <div class="sorting-option sorting-buttons">
-      <button class="button button-up"><img src="images/triangle.svg" width="11" height="10" alt="Упорядочить по возрастанию">
+      <button class="button button-up"><img src="#" alt="Упорядочить по возрастанию">
       </button>
-      <button class="button button-down"><img src="images/triangle.svg" width="11" height="10" alt="Упорядочить по убыванию">
+      <button class="button button-down"><img src="#" alt="Упорядочить по убыванию">
       </button>
     </div>
   </section>
@@ -203,11 +208,12 @@
         <a class="pagination-next button" href="#">Вперед</a>
     </ul>
 
-
+  </div>
+</div>
 </main>
 
 <footer class="page-footer">
-
+<div class="page-footer-container">
     <a class="logo-page-footer-link" href="index.html" title="Перейти на главную страницу">
       <img src="images/device-logo.svg" width="145" height="36" alt="Логотип Device">
     </a>
@@ -256,6 +262,7 @@
     <a class="htmlacademy-link" href="https://htmlacademy.ru/"><img src="#" alt="Переход к HTMLAcademy"></a>
     </div>
   </section>
+</div>
   </footer>
 
 </body>
