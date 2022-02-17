@@ -7,42 +7,44 @@
   </head>
   <body>
 
-  <header class="page-header">
+<header class="page-header">
 
-
-    <a class="logo-page-header-link" href="/" title="Переход на главную страницу" id="index.html">
-      <img src="images\device-logo.svg" width="145" height="36" alt="Логотип Device">
+<div class="logo">
+    <a class="logo-page-header-link" href="/" title="Переход на главную страницу." id="index.html">
+      <img src="images\device-logo.svg" width="145" height="36" alt="Логотип Device.">
     </a>
+</div>
 
+<nav class="navigation">
 
-    <nav class="navigation">
-
+<div class="navigation-form">
       <form class="navigation-product-search" action="https://echo.htmlacademy.ru/" method="get">
         <label>
-           <input class="search-product" type="text" name="search" value="Найти товар">
+           <input class="search-product" type="text" name="search" value="Найти товар.">
         </label>
             <button class="search-product-button" type="submit">Найти</button>
       </form>
 
 
-    <ul class="navigation-list navigation-user">
+    <ul class="navigation-user">
       <li class="navigation-item">
-        <a class="navigation-link" href="#"><img src="#" alt="Войти">Войти</a>
+        <a class="navigation-link" href="#">Войти<span class="visually-hidden">Войти</span>
           </li>
         <li class="navigation-item">
-         <a class="navigation-link" href="#"><img src="#" alt="Сравнить товары">Сравнить</a>
+         <a class="navigation-link" href="#">Сравнить<span class="visually-hidden">Сравнить</span>
           </li>
       <li class="navigation-item">
-        <a class="navigation-link" href="#"><img src="#" alt="Товары в корзине">Корзина</a>
+        <a class="navigation-link" href="#">Корзина<span class="visually-hidden">Корзина</span>
           </li>
       </ul>
+</div>
 
 
 
       <ul class="navigation-list">
         <li class="header-menu-item">
-          <a class="header-catalog-link button" href="catalog.html">Каталог товаров
-            <img src="images/header-icons/catalog.svg" width="50" height="50" alt="Каталог товаров">
+          <a class="header-menu-link button" href="catalog.html">Каталог товаров
+
           </a>
             </li>
         <li class="header-menu-item">
@@ -67,12 +69,14 @@
   <div class="slider-item">
       <img class="slider-image" src="images\slider-images\slider-1.png" width="560" height="560" alt="Фотография квадрокоптера">
         <div class="slider-description">
-          <span class="slider-current item-number">01</span>
+          <!-- <span class="slider-current item-number">01</span> -->
             <h3 class="slider-description-title">Порхает как бабочка, жалит как пчела!</h3>
               <p class="slider-description-item">Этот обычный, на первый взгляд,
                 квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.
               </p>
+
                 <a class="slider-item-detiled button" href="#">Подробнее</a>
+
                 <dl class="slider-advanteges">
                   <dt class="slider-advanteges-item current-item">800 м</dt>
                     <dd class="slider-advanteges-description">Дальность полета</dd>
@@ -174,19 +178,20 @@
           </ul>
       </section>
 
+<div class="advanteges-wrapper">
 
 <div class="advanteges-container">
   <section class="advanteges">
       <h2 class="visually-hidden">Меню сервиса покупки</h2>
         <ul class="advanteges-menu">
           <li class="advanteges-menu-point">
-            <a class="advanteges-link advanteges-link-current" href="#">Доставка</a>
+            <a class="advanteges-link advanteges-link-current button" href="#">Доставка</a>
           </li>
           <li class="advanteges-menu-point">
-            <a class="advanteges-link guarantee-link" href="#">Гарантия</a>
+            <a class="advanteges-link guarantee-link button" href="#">Гарантия</a>
           </li>
           <li class="advanteges-menu-point">
-            <a class="advanteges-link credit-link" href="#">Кредит</a>
+            <a class="advanteges-link credit-link button" href="#">Кредит</a>
           </li>
         </ul>
   </section>
@@ -200,29 +205,32 @@
           к вашему подъезду совершенно бесплатно! Ведь
           мы неплохо заработаем, поднимая его на ваш этаж.
       </p>
-        <div class="image-courier">
-          <img src="images/advanteges-image/postman.png" width="136" height="164"alt="Картинка курьера">
-        </div>
     </div>
+        <div class="image-advanteges">
+          <img src="images/advanteges-image/postman.png" width="136" height="164"alt="Картинка курьера.">
+        </div>
+</div>
 
-    <div class="advanteges-guarantee">
+</div>
+
+    <div class="advanteges-guarantee visually-hidden">
       <h2 class="advanteges-header">Гарантия</h2>
       <p class="advanteges-description">Если из-за возгорания купленного у нас товара у вас
           сгорит дом — не переживайте, мы выдадим вам новый.
           Товар, не дом, конечно же.
       </p>
-        <div class="image-guarantee">
-          <img src="images/advanteges-image/guarantee.png" width="171" height="195" alt="Гарантия услуги">
+        <div class="image-advanteges">
+          <img src="images/advanteges-image/guarantee.png" width="171" height="195" alt="Гарантия услуги.">
         </div>
     </div>
 
-    <div class="advanteges-credit">
+    <div class="advanteges-credit visually-hidden">
       <h2 class="advanteges-header">Кредит</h2>
       <p class="advanteges-description">Залезть в долговую яму стало проще!
           Кредитные консультанты подберут для вас наиболее выгодные условия кредита.
           Выгодные для банка, разумеется.</p>
-        <div class="image-credit">
-          <img src="images/advanteges-image/credit.png" width="156" height="188" alt="Услуга кредитования">
+        <div class="image-advanteges">
+          <img src="images/advanteges-image/credit.png" width="156" height="188" alt="Услуга кредитования.">
         </div>
     </div>
   </section>
@@ -233,10 +241,10 @@
           <h2 class="visually-hidden">Доставка редкого товара</h2>
           <div class="delivery-exclusive-service">
            <a class="delivery-exclusive-link" href="#">
-             <img src="images/delivery.svg" width="47" height="31" alt="Картинка курьерской машины">
+             <img src="images/delivery.svg" width="47" height="31" alt="Картинка курьерской машины.">
             <p class="delivery-exclusive exclusive-description">
               Доставим редкий товар под заказ</p>
-            <img src="images/info.svg" width="40" height="40" alt="Описание услуги">
+            <img src="images/info.svg" width="40" height="40" alt="Описание услуги.">
           </a>
           </div>
         </section>
@@ -282,12 +290,16 @@
 </div>
 
 
-<div class="subscription-container">
+<div class="subscription-wrapper">
   <section class="subscription">
+
     <h2 class="subscription-title">Подпишитесь на рассылку</h2>
       <p class="subscription-description">Еженедельный дайджест с обзорами новинок,
         длительными тест-драйвами, распаковками, а также акции, спецпредложения и вот это вот всё.
       <p>
+
+
+
     <form class="subscription-email" action="https://echo.htmlacademy.ru/" method="post" >
       <label>
         <input class="subscription-email-adress" type="email" name="email" value="Ваш email">
@@ -299,21 +311,25 @@
       <!-- background-image -->
         <p class="postscript-mark">Это бесплатно</p>
     </div>
+
     </section>
   </div>
+
+</div>
 </main>
 
 
 
  <footer class="page-footer">
+
   <div class="page-footer-container">
 
-
+    <section class="footer-content">
     <a class="logo-page-footer-link" href="#index.html" title="Перейти наверх главной страницы.">
       <img src="images/device-logo.svg" width="145" height="36" alt="Логотип Device.">
     </a>
 
-  <section class="footer-content">
+
     <h2 class="visually-hidden">Содержание нижней части страницы </h2>
       <p class="footer-contacts">Санкт-Петербург, набережная реки Карповки, 5, литера П.</p>
   </section>

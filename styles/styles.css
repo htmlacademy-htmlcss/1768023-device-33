@@ -65,6 +65,7 @@ body {
   width: 1160px;
   margin: 0 auto;
 }
+
 .button {
   font-family: "Raleway", sans-serif;
   font-size: 18px;
@@ -78,19 +79,42 @@ body {
   text-transform: uppercase;
 }
 
-/* стилизация шапки */
-
-.navigation {
-  display: flex;
-  width: 1160px;
-  margin: 0 auto;
-}
-
+/* стилизация хэдэра */
 .page-header {
+  background-color: #FFFFFF;
   color: #000000;
-  background-color: #FFE17F;
+  margin: 0 auto;
+  width: 1040px;
+  margin-top: 0 auto;
+  margin-top: 18px;
 }
 
+
+/* мелкие сетки: логотип хэдэра */
+.logo-page-header-link {
+  display: block;
+  margin-right: auto;
+  margin-bottom: 30px;
+}
+
+/* мелкие сетки: форма поиска и меню пользователя */
+
+.navigation-form {
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.navigation-product-search {
+  margin-right: 26px;
+}
+
+.navigation-user {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
 
 .navigation-product-search {
   font-family: "Rubik", sans-serif;
@@ -102,7 +126,10 @@ body {
   background-color: inherit;
 }
 
-.navigation-user a {
+.navigation-link {
+  margin-left: 18px;
+  padding: 8px;
+
   font-family: "Rubik", sans-serif;
   font-size: 18px;
   font-weight: 400;
@@ -112,6 +139,24 @@ body {
   text-decoration: none;
   text-transform: uppercase;
 }
+
+.navigation-user li:first-child {
+  margin-right: 150px;
+}
+
+/* мелкие сетки: каталог с плюсиком и ссылки */
+
+.navigation-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+/* .header-menu-item {
+
+} */
 
 /*  слайдер */
 
@@ -129,15 +174,35 @@ body {
   line-height: 30px;
   color: #000000;
   background-color: #ffffff;
+
+  /* мелкая сетка слайдер, сказали на гридах лучше делать */
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
 }
 
+
 .slider-current {
+  /* мелкая сетка слайдер, лучше на гридах */
+  min-width: 250px;
+  min-height: 135px;
+  margin-right: auto;
+
   font-size: 180px;
-  font-weight: 800;
+  font-weight: 700;
   line-height: 30px;
   color: #ffffff;
   background-color: #FFE17F;
   text-align: right;
+}
+
+/* мелкие сетки: три точки(пагинация) товара слайдерах */
+.slider-pagination {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  display: flex;
 }
 
 .slider-description-title {
@@ -163,6 +228,22 @@ body {
 
 /* стилизация ссылок категории товаров */
 
+/* мелкие сетки: стилизация ссылок категории товаров */
+
+
+.categoty-list {
+  margin-bottom: 70px;
+}
+
+.category-list-item {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  list-style-type: none;
+  flex-wrap: wrap;
+  margin-right: 40px;
+}
+
 .categoty-item-link {
   font-family: "Raleway", sans-serif;
   font-size: 18px;
@@ -170,10 +251,25 @@ body {
   line-height: 24px;
   color: inherit;
   text-decoration: none;
+  letter-spacing: -0.02em;
+
+  display: flex;
+  flex-direction: column;
+  min-width: 160px;
+  min-height: 253px;
 }
 
 
+
+
 /* стилизация ссылок возможностей сервиса */
+
+/* мелкие сетки: контейнер возможностей сервиса */
+.advanteges-wrapper {
+  display: flex;
+  margin-bottom: 70px;
+
+}
 .advanteges-container {
   font-family: "Raleway", sans-serif;
   font-size: 18px;
@@ -184,11 +280,28 @@ body {
   background-color: #F0F0F0;
 }
 
+/* мелкие сетки: стилизация меню возможностей */
+.advanteges-menu {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+
+}
+
 .advanteges-link {
+  display: flex;
+  flex-direction: column;
+  padding-top: 10px;
+  padding-bottom: 12px;
+  margin-top: 64px;
+  margin-right: 120px;
+
   color: inherit;
   text-decoration: none;
   text-transform: uppercase;
+
 }
+
 .advanteges-link-current {
   color: #FFE17F;
   background-color: #000000;
@@ -198,6 +311,19 @@ body {
 .advanteges-text-container {
   color: inherit;
   background-color: #F0F0F0;
+
+  display: flex;
+}
+
+.advanteges-delivery {
+  padding: 0;
+  margin: 0;
+  margin-left: 116px;
+}
+
+.image-advanteges {
+  display: block;
+
 }
 
 .advanteges-header {
@@ -206,6 +332,8 @@ body {
   font-weight: 800;
   line-height: 50px;
   color: inherit;
+
+  margin-bottom: 34px;
 }
 
 .advanteges-description {
@@ -217,14 +345,18 @@ body {
 
 /* стилизации доставки редкого товара */
 
+/* мелкие сетки: стилизация доставки редкого товара */
+
+
+
 .delivery-exclusive-service {
-  display: inline-block;
+  display: flex;
   align-items: stretch;
   justify-content: space-between;
-  margin-top: 70px;
-  margin-left: 140px;
-  margin-right: 140px;
+  margin-bottom: 70px;
+  margin: 0 auto;
   width: 1160px;
+
   color: inherit;
   background-color: #F0F0F0;
 }
@@ -238,22 +370,26 @@ body {
   text-decoration: none;
   text-align: center;
   text-transform: uppercase;
+  letter-spacing: 0.2em;
 }
 
 /* стилизация части о компании */
 
 .index-columns {
   display: flex;
-  justify-content: space-between;
-  padding: 0 auto;
+  margin-top: 70px;
+
 }
 
 .about {
   width: 520px;
+  margin-right: 130px;
+  margin-left: 140px;
 }
 
 .contacts {
   width: 532px;
+
 }
 
 .about h2, .contacts h2 {
@@ -294,13 +430,15 @@ body {
 
 /* стилизация рассылки */
 
-.subscription-container {
-  width: 1440px;
+.subscription-wrapper {
+  width: 1160px;
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
   background-color: #F0F0F0;
+  margin-top: 80px;
 }
+
 
 .subscription-title {
   font-family: "Raleway", sans-serif;
@@ -321,10 +459,10 @@ body {
 
 .page-footer-container {
   display: flex;
-  width: 1440px;
+  width: 1160px;
   margin: 0 auto;
-  justify-content: space-between;
 }
+
 
 .page-footer {
   font-size: 16px;
@@ -334,25 +472,20 @@ body {
   background-color: #444444;
 }
 
-.footer-contacts {
-  width: 239px;
-  margin-right: 112px;
-}
-
-.footer-social-container {
-  display: block;
-  margin: 0;
+.footer-menu-list {
   padding: 0;
+  margin: 0;
+  list-style-type: none;
+  display: flex;
 }
 
-.footer-contacts-container {
-  display: block;
-  width: 175px;
-  margin-top: 140px;
-  margin-right: 140px;
-  margin-left: 190px;
-  margin-bottom: 65px;
+.footer-social-list {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  display: flex;
 }
+
 
 .footer-contacts-phone {
   font-family: "Rubik", sans-serif;
