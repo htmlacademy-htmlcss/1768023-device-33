@@ -1,65 +1,65 @@
 <!DOCTYPE html>
 <html lang="ru">
-    <head>
-        <meta charset="utf-8">
-        <title> Каталог товаров </title>
-        <link rel="stylesheet" href="styles/styles.css">
-    </head>
-<body>
-  <header class="page-header">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Девайс</title>
+    <link rel="stylesheet" href="styles/styles.css">
+  </head>
+  <body>
 
+
+  <header class="page-header">
 
     <a class="logo-page-header-link" href="index.html" title="Переход на главную страницу.">
       <img src="images\device-logo.svg" width="145" height="36" alt="Логотип Device.">
     </a>
 
 
-    <nav class="navigation">
+ <nav class="navigation">
+  <div class="navigation-form">
+    <form class="navigation-product-search" action="https://echo.htmlacademy.ru/" method="get">
+      <label>
+        <input class="search-product" type="text" name="search" value="Найти товар">
+      </label>
+          <button class="search-product" type="submit">Найти</button>
+    </form>
 
-      <form class="navigation-product-search" action="https://echo.htmlacademy.ru/" method="get">
-        <label>
-           <input class="search-product" type="text" name="search" value="Найти товар">
-        </label>
-            <button class="search-product-button" type="submit">Найти</button>
-      </form>
-
-
-    <ul class="navigation-list navigation-user">
-      <li class="navigation-item" href="#" alt="Иконка пользователя">Коля Петухов</li>
+    <ul class="navigation-user">
       <li class="navigation-item">
-        <a class="navigation-link" href="#">Выйти</a>
-          </li>
-        <li class="navigation-item">
-         <a class="navigation-link" href="#"><img src="#" alt="Сравнить товары">Сравнить</a>
-          </li>
+        <a class="navigation-link" href="#">Коля Петухов<span class="visually-hidden">Аккаунт</span></a>
+      </li>
       <li class="navigation-item">
-        <a class="navigation-link" href="#"><img src="#" alt="Товары в корзине">Корзина</a>
-          </li>
-      </ul>
+        <a class="navigation-link" href="#">Выйти<span class="visually-hidden">Выйти</span></a>
+      </li>
+      <li class="navigation-item">
+        <a class="navigation-link" href="#">Сравнить<span class="visually-hidden">Сравнить</span></a>
+      </li>
+      <li class="navigation-item">
+        <a class="navigation-link" href="#">Корзина<span class="visually-hidden">Корзина</span></a>
+      </li>
+    </ul>
+  </div>
 
-
-
-      <ul class="navigation-list">
-        <li class="header-menu-item">
-          <a class="header-catalog-link button" href="catalog.html">Каталог товаров
-            <img src="images/header-icons/catalog.svg" width="50" height="50" alt="Каталог товаров">
-          </a>
-            </li>
-        <li class="header-menu-item">
-          <a class="header-menu-link button" href="#">Доставка</a>
-            </li>
-        <li class="header-menu-item">
-          <a class="header-menu-link button" href="#">Гарантия</a>
-            </li>
-        <li class="header-menu-item">
-          <a class="header-menu-link button" href="#">Контакты</a>
-            </li>
-        </ul>
-    </nav>
+    <ul class="navigation-list">
+      <li class="header-menu-item">
+        <a class="header-menu-link button" href="catalog.html">Каталог товаров</a>
+      </li>
+      <li class="header-menu-item">
+        <a class="header-menu-link button" href="#">Доставка</a>
+      </li>
+      <li class="header-menu-item">
+        <a class="header-menu-link button" href="#">Гарантия</a>
+      </li>
+      <li class="header-menu-item">
+        <a class="header-menu-link button" href="#">Контакты</a>
+      </li>
+    </ul>
+  </nav>
   </header>
 
 
 <main class="main-inner main-container">
+
   <div class="page-container">
   <!-- хлебные крошки -->
   <header class="inner-header">
@@ -79,7 +79,7 @@
   </header>
 
   <!-- фильтрация каталога -->
-  <section class="sorting sorting-filter">
+  <section class="sorting-filter">
     <h2 class="sorting-header">Фильтр:</h2>
 
       <form class="filter-product" action="https://echo.htmlacademy.ru/" metod="get">
@@ -134,9 +134,9 @@
   </select>
 
   <div class="sorting-option sorting-buttons">
-      <button class="button button-up"><img src="#" alt="Упорядочить по возрастанию">
+      <button class="button button-up visually-hidden"><img src="#" alt="Упорядочить по возрастанию">
       </button>
-      <button class="button button-down"><img src="#" alt="Упорядочить по убыванию">
+      <button class="button button-down visually-hidden"><img src="#" alt="Упорядочить по убыванию">
       </button>
     </div>
   </section>
@@ -185,7 +185,7 @@
   <button class="pagination-load-more" type="button">Загрузить ещё </button>
 
   <!-- пагинация -->
-    <ul class="pagination">
+    <ol class="pagination">
       <li class="pagination-item">
         <a class="pagination-prev button" href="#">Назад</a>
       </li>
@@ -206,28 +206,27 @@
       </li>
       <li class="pagination-item">
         <a class="pagination-next button" href="#">Вперед</a>
-    </ul>
+    </ol>
 
   </div>
 </div>
 </main>
 
 <footer class="page-footer">
+
   <div class="page-footer-container">
 
-
-    <a class="logo-page-footer-link" href="index.html" title="Перейти на главную страницу.">
+    <a class="logo-page-footer-link" href="#index.html" title="Перейти наверх главной страницы.">
       <img src="images/device-logo.svg" width="145" height="36" alt="Логотип Device.">
     </a>
 
-    <section class="footer-content">
-      <h2 class="visually-hidden">Содержание нижней части страницы </h2>
-        <p class="footer-contacts">Санкт-Петербург, набережная реки Карповки, 5, литера П.</p>
-    </section>
+<div class="footer-content-container">
+  <div class="footer-content">
+    <h2 class="visually-hidden">Содержание нижней части страницы </h2>
+      <p class="footer-contacts">Санкт-Петербург, набережная реки Карповки, 5, литера П.</p>
+  </div>
 
-    <section class="footer-social">
-      <div class="footer-social-container">
-
+  <div class="footer-social-container">
     <ul class="footer-menu-list">
       <li class="footer-menu-item">
         <a class="footer-menu-link" href="#">Доставка</a>
@@ -239,6 +238,15 @@
         <a class="footer-menu-link" href="#">Контакты</a>
       </li>
     </ul>
+  </div>
+
+  <div class="footer-contacts-container">
+    <a class="footer-contacts-phone" href="tel:+7812812-12-12">Тел.: +7 (812) 812-12-12</a>
+  </div>
+
+</div>
+
+  <div class="footer-social-link">
 
     <h2 class="visually-hidden">Контакты на социальные сети</h2>
     <ul class="footer-social-list">
@@ -262,17 +270,13 @@
       </li>
     </ul>
 
-  </div>
-</section>
-
-  <div class="footer-contacts-container">
-    <a class="footer-contacts-phone" href="tel:+7812812-12-12">+7 (812) 812-12-12</a>
-
-    <div class="about-text">
+     <div class="about-text">
     <a class="htmlacademy-link" href="https://htmlacademy.ru/"><img src="images/academy-logo.svg" width="115" height="33"alt="Переход к HTMLAcademy"></a>
     </div>
   </div>
-</div>
+
+  </div>
+
   </footer>
 
 </body>
