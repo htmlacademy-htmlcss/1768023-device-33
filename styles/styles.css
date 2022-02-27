@@ -177,10 +177,13 @@ body {
 /*  слайдер */
 
 .slider-item {
-  display: flex;
+  /* display: flex;
   width: 1111px;
   margin-top: 2px;
-  margin-bottom: 70px;
+  margin-bottom: 70px; */
+  display: grid;
+  grid-template-columns: 560px 600px;
+  width: 1160px;
 }
 
 .slider-description {
@@ -203,7 +206,7 @@ body {
   /* мелкая сетка слайдер, лучше на гридах */
   min-width: 250px;
   min-height: 135px;
-  margin-right: auto;
+  margin-left: auto;
 
   font-size: 180px;
   font-weight: 700;
@@ -633,6 +636,7 @@ body {
 .main-inner {
   padding-top: 36px;
 }
+
 /* стилизация заголовка */
 .inner-header-title {
   font-family: "Raleway", sans-serif;
@@ -674,16 +678,19 @@ body {
   margin-right: 36px;
 }
 
+
+.catalog-products {
+  display: flex;
+}
+
 /* стилизация фильтрации */
 .sorting-filter {
   display: flex;
   flex-direction: column;
-}
-
-.filter-product {
   width: 320px;
   margin-right: 40px;
 }
+
 
 .sorting-header {
   font-family: "Raleway", sans-serif;
@@ -720,6 +727,7 @@ body {
 .sorting {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 70px;
 }
 
 .sorting-option .button {
@@ -728,7 +736,7 @@ body {
 }
 
 
-/* стилизация карточек товара */
+/* стилизация списка карточек товара */
 
 .catalog-right-column {
   width: 840px;
@@ -739,8 +747,23 @@ body {
   margin: 0;
   list-style-type: none;
 
-
   background-color: #FFFFFF;
+
+  display: grid;
+  grid-template-columns: repeat(2, 360px);
+  gap: 40px 44px;
+  margin-bottom: 44px;
+}
+
+/* стилизация карточки товара */
+
+.product-card-img {
+  object-fit: contain
+}
+
+.product-card-content {
+  display: flex;
+  align-items: center;
 }
 
 .product-card-title {
@@ -749,11 +772,15 @@ body {
   font-weight: 700;
   line-height: 20px;
   letter-spacing: -0.02em;
+
 }
 
 .product-card-link {
   color: inherit;
   text-decoration: none;
+
+  margin-right: auto;
+  width: 226px;
 }
 
 .product-card-price {
@@ -762,7 +789,7 @@ body {
   color: #444444;
 }
 
-/* стилизация кнопки "Загругить ещё"*/
+/* стилизация кнопки "Загрузить ещё"*/
 .pagination-wrapper {
   display: flex;
   flex-direction: column;
@@ -780,7 +807,6 @@ body {
   width: 760px;
   background-color: #FFFFFF;
   border: 3px solid #E5E5E5;
-  margin-top: 44px;
   margin-bottom: 44px;
   padding-top: 18px;
   padding-bottom: 18px;
