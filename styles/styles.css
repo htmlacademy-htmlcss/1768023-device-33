@@ -78,8 +78,58 @@ body {
   text-decoration: none;
   text-transform: uppercase;
 
+
+  padding: 10px 40px;
+  position: relative;
 }
 
+.button::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 8px;
+  background-color: #FFE17F;
+  z-index: -1;
+  left: 0;
+  top: 16px;
+}
+
+.button:hover::before {
+  width: 100%;
+  height: 100%;
+  top: 0;
+}
+
+.button:hover:active::before {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  background-color: #ffc700;
+}
+
+.button:focus {
+  outline: 2px solid #AF4FFF;
+}
+
+/* вопрос: можно ли сделать ссылку неактивной? */
+.button:disabled {
+  opacity: 0.3;
+  cursor: default;
+  border: none;
+}
+
+.button-menu-item {
+  font-family: "Raleway", sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  font-style: normal;
+  line-height: 21px;
+  color: #000000;
+  text-align: center;
+  letter-spacing: 0.2em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
 /* стилизация хэдэра */
 .page-header {
   background-color: #FFE17F;
@@ -91,32 +141,41 @@ body {
   padding-right: 60px;
   padding-bottom: 152px;
 
+  position: relative;
+
 }
 
-/* единая стилизация фокуса на ссылки для хэдэра*/
 
-/* единая стилизация наведения(hover) для хэдэра */
-.page-header a:hover {
+/* единая стилизация наведения(hover) для меню пользователя */
+.page-header .navigation-form a:hover {
   opacity: 0.6;
 }
 
-/* единая стилизация активной ссылки для хэдэра */
-.page-header a:active {
+/* единая стилизация активной ссылки  для меню пользователя */
+.page-header .navigation-form a:active {
   opacity: 0.3;
 }
-
-.page-header a:focus {
+/* единая стилизация фокуса для меню пользователя */
+.page-header .navigation-form a:focus {
   outline:  2px solid #AF4FFF;
 }
-/* мелкие сетки: логотип хэдэра */
+
+/* стилизация: логотип хэдэра */
 .logo-page-header-link {
   width: 146px;
-  display: block;
-  margin-right: auto;
-  margin-bottom: 30px;
-  margin-top: -20px;
+  position: relative;
+  bottom: 20px;
 }
 
+.logo-page-header-link:hover {
+  opacity: 0.6;
+}
+.logo-page-header-link:active {
+  opacity: 0.3;
+}
+.logo-page-header-link:focus {
+  outline:  2px solid #AF4FFF;
+}
 /* стилизация форм поиска и меню пользователя */
 
 .navigation-form {
@@ -224,7 +283,6 @@ body {
   font-size: 16px;
   font-weight: 400;
   line-height: 20px;
-  text-align: center;
   color: inherit;
   background-color: inherit;
   cursor: pointer;
@@ -238,7 +296,7 @@ body {
   color: inherit;
   background-color: inherit;
   text-decoration: none;
-  text-transform: uppercase;
+
 
   cursor: pointer;
   display: block;
@@ -292,16 +350,14 @@ body {
 }
 
 
-/* мелкие сетки: каталог с плюсиком и ссылки */
-
+/* каталог с плюсиком и ссылки */
 .navigation-list {
   display: flex;
   flex-wrap: wrap;
-  width: 100%;
   margin: 0;
   padding: 0;
   list-style-type: none;
-  position: relative;
+  align-items: center;
 }
 
 
@@ -314,27 +370,94 @@ body {
 }
 
 /* проблема с кнопкой */
+.button-catalog {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
 .popover-button {
-  position: absolute;
+  position: relative;
   width: 50px;
   height: 50px;
   border-radius: 50px;
   border: 2px solid #000000;
-  opacity: 0.3;
   background-color: inherit;
   margin-left: 7px;
-  }
+  /* top: -15px; */
+  cursor: pointer;
+
+  opacity: 0.3;
+}
+
+.popover-button::after {
+  content: "";
+
+  position: absolute;
+
+  background-image: url("../images/header-icons/minus.svg");
+  background-repeat: no-repeat;
+
+  width: 16px;
+  height: 2px;
+  top: 24px;
+  left: 16px;
+
+  opacity: 1;
+  display: none;
+}
+
+.popover-close::before{
+  content: "";
+
+  position: absolute;
+
+  background-image: url("../images/header-icons/plus.svg");
+  background-repeat: no-repeat;
+
+  width: 16px;
+  height: 16px;
+  top: 15px;
+  left: 16px;
+  /* display: none; */
+}
+
+.popover-button:hover,
+.popover-button:active {
+  opacity: 1;
+}
+
+.popover-close:hover,
+.popover-close:active {
+  opacity: 1;
+}
+
+.button-catalog:focus-within {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
+}
+
+.navigation-list li:not(:nth-child(1)):hover {
+  opacity: 0.6;
+}
+.navigation-list li:not(:nth-child(1)):active {
+  opacity: 0.3;
+}
+
+.navigation-list a:focus-within {
+  outline: 2px solid #AF4FFF;
+}
 
 
 
 /*  слайдер */
 
-.slider-item {
+.slider-item:not(.visually-hidden) {
   display: flex;
   position: relative;
   width: 1160px;
   margin: 0 auto;
-  margin-bottom: 70px;
+  margin-bottom: 212px;
 }
 
 /* левая часть слайдера с картинкой */
@@ -342,7 +465,7 @@ body {
   display: block;
   position: relative;
 
-  top: -150px;
+  top: -152px;
   margin-right: 40px;
 }
 
@@ -350,14 +473,13 @@ body {
 .slider-current {
   font-size: 180px;
   font-weight: 700;
-  line-height: 30px;
+  line-height: 100%;
   color: #ffffff;
-  background-color: #FFE17F;
   text-align: right;
 
   position: absolute;
   right: 49px;
-  top: -81px;
+  top: -141px;
   z-index: -1;
   width: 250px;
 }
@@ -395,22 +517,6 @@ body {
   margin-bottom: 49px;
 }
 
-.slider-item-detiled {
-  display: block;
-  padding: 10px 5px;
-
-  position: relative;
-}
-
-.slider-item-detiled::before {
-  content: "";
-  position: absolute;
-  width: 220px;
-  height: 8px;
-  background-color: #FFE17F;
-  z-index: -1;
-  top: 16px;
-}
 .slider-pagination {
   padding: 0;
   margin: 0;
@@ -485,6 +591,7 @@ body {
 .categoty-list {
   margin-bottom: 70px;
   width: 1160px;
+  padding-bottom: 150px;
 }
 
 .categoty-item-link {
@@ -543,17 +650,19 @@ body {
 /* стилизация ссылок возможностей сервиса */
 
 
-.advanteges-wrapper {
-  position: relative;
+.advanteges-background {
   background-color: #F0F0F0;
-  background-size: 100% auto;
   margin-bottom: 70px;
+
 }
 
 
 .advanteges-wrapper {
+  position: relative;
   display: flex;
   width: 1160px;
+  margin: 0 auto;
+  top: -102px;
 }
 
 .advanteges-container {
@@ -564,17 +673,17 @@ body {
   text-align: center;
   color: inherit;
 
-  margin-top: 64px;
-  margin-bottom: 64px;
   margin-right: 120px;
   position: relative;
   width: 280px;
 }
 
 
-.advanteges-container::before {
+.advanteges-container::after {
   content: "";
 
+  top: 0;
+  bottom: 0;
   width: 7px;
   height: 319px;
   background-color:#000000;
@@ -589,12 +698,13 @@ body {
   display: flex;
   flex-direction: column;
 
-  padding-top: 64px;
-  padding-bottom: 64px;
   width: 280px;
+  margin-right: 120px;
+  padding-top: 64px;
+  padding-bottom: 65px;
 }
 
-.advanteges-menu-point:not(:last-child) {
+.advanteges-menu li:not(:last-child) {
   margin-bottom: 35px;
 }
 
@@ -605,15 +715,45 @@ body {
   line-height: 21px;
   text-align: center;
   color: inherit;
+  z-index: 1;
 
-  display: block;
+  position: relative;
+  padding: 10px 20px;
   text-decoration: none;
   text-transform: uppercase;
+
+  right: -6px;
+  top: 7px;
+  padding-right: 120px;
 }
+
+.advanteges-link::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 8px;
+  background-color: #FFE17F;
+  z-index: -1;
+  left: 0;
+  top: 16px;
+}
+
 
 .advanteges-link-current {
   color: #FFE17F;
   background-color: #000000;
+  padding-right: 120px;
+}
+.advanteges-link-current:hover {
+  background-color: #000000;
+  opacity: 0.5;
+}
+.advanteges-link:active {
+  opacity: 0.3;
+}
+.advanteges-link:focus {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
 }
 
 /* стилизация описаний возможностей сервиса */
@@ -621,14 +761,10 @@ body {
 .advanteges-text-container {
   display: flex;
 
-  max-width: 748px;
+  width: 694px;
 }
 
 
-.advanteges-service {
-  display: block;
-  padding: 77px 63px 77px 0;
-}
 
 .advanteges-header {
   font-family: "Raleway", sans-serif;
@@ -636,9 +772,12 @@ body {
   font-weight: 800;
   line-height: 50px;
   color: inherit;
+  padding: 0;
+  margin: 0;
 
-  margin-bottom: 34px;
-  margin-top: 0;
+  display: block;
+  margin-top: 72px;
+  margin-bottom: 34px;;
 }
 
 .advanteges-description {
@@ -647,15 +786,19 @@ body {
   line-height: 30px;
   color: #444444;
 
+  padding: 0;
   margin: 0;
+
+  display: inline-block;
+
 }
 
 .image-advanteges {
   display: block;
-  padding: 77px 63px 77px 0;
+  margin-top: 77px;
+  margin-right: auto;
 }
 /* стилизации доставки редкого товара */
-
 
 .delivery-exclusive-link {
   font-family: "Raleway", sans-serif;
@@ -671,12 +814,14 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 70px;
   margin: 0 auto;
+  margin-bottom: 70px;
   width: 1160px;
 
 
   background-color: #F0F0F0;
+
+  position: relative;
 }
 
 .deliverycar {
@@ -688,22 +833,32 @@ body {
   align-items: center;
 }
 
-.info-svg {
-  display: block;
-  margin-right: 40px;
-  /* width: 125px;
-  height: 100px;
-  justify-content: center;
-  align-items: center; */
+.delivery-exclusive-link::after {
+  content: "";
+
+  position: relative;
+  background-image: url("../images/info.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+
+  width: 40px;
+  height: 40px;
+  opacity: 0.3;
+
+  border-radius: 50px;
+  background-color: #DCDCDC;
+
+  right: 40px;
 }
+
+
 
 .delivery-exclusive-link:hover .deliverycar {
   background-color: #FFC700;
 }
 
-/* отрисовывать svg? */
-.delivery-exclusive-link:hover .info-svg {
-  box-shadow: 0 4px 4px 0 #000000;;
+.delivery-exclusive-link:hover::after{
+  opacity: 1.0;
 }
 
 .delivery-exclusive-link:active {
@@ -714,11 +869,13 @@ body {
   outline: 2px solid #AF4FFF;
 }
 
+/* стилизация блока о возможностях компании */
+
 /* стилизация части о компании */
 
 .index-columns {
   display: flex;
-  margin-top: 70px;
+  margin-bottom: 70px;
 }
 
 .about {
@@ -770,6 +927,7 @@ body {
   line-height: 20px;
   letter-spacing: -0.02em;
   margin-bottom: 30px;
+  padding-left: 15px;
 
 }
 
@@ -782,22 +940,6 @@ body {
 .about span {
   color: #000000;
   margin-left: 26px;
-}
-
-.more-about {
-  display: block;
-  position: relative;
-  padding: 10px 5px;
-}
-.more-about::before {
-  content: "";
-  position: absolute;
-  width: 270px;
-  height: 8px;
-  background-color: #FFE17F;
-
-  z-index: -1;
-  top: 16px;
 }
 
 .about h3, .contacts h3 {
@@ -813,36 +955,27 @@ body {
   text-decoration: underline;
 }
 
-.contact-message {
-  display: block;
-  position: relative;
-  padding: 10px 5px;
-}
-.contact-message::before {
-  content: "";
-  position: absolute;
-  width: 270px;
-  height: 8px;
-  background-color: #FFE17F;
-
-  z-index: -1;
-  top: 16px;
-}
 .contacts ul {
   color: #444444;
 }
 
 /* стилизация рассылки */
+.subscription-background {
+  background-color: #F0F0F0;
+}
+
 .subscription {
+  padding-top: 64px;
+
   display: flex;
   flex-direction: column;
-  margin-top: 70px;
+  width: 1160px;
+  margin: 0 auto;
 }
 
 .subscription-text {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+  justify-content: space-between;
   margin-bottom: 144px;
 }
 
@@ -852,14 +985,17 @@ body {
   font-weight: 800;
   line-height: 50px;
 
+  margin: 0;
   display: block;
   margin-right: 252px;
 }
 
 .subscription-description {
   color: #444444;
-
   display: block;
+
+  margin: 0;
+  padding: 0;
 }
 
 .subscription-form {
