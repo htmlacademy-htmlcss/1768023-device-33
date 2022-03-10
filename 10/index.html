@@ -60,18 +60,20 @@
 
     <ul class="navigation-list">
       <li class="header-menu-item">
-        <a class="button" href="catalog.html">Каталог товаров
+        <a class="button button-catalog" href="catalog.html">Каталог товаров
+          <button class="popover-button popover-close" type="button">
+            <span class="visually-hidden">Раскрыть каталог</span>
+          </button>
         </a>
-      <button class="popover-button" type="button" > </button>
       </li>
       <li class="header-menu-item">
-        <a class=" button" href="#">Доставка</a>
+        <a class="button-menu-item" href="#">Доставка</a>
       </li>
       <li class="header-menu-item">
-        <a class=" button" href="#">Гарантия</a>
+        <a class="button-menu-item" href="#">Гарантия</a>
       </li>
       <li class="header-menu-item">
-        <a class="button" href="#">Контакты</a>
+        <a class="button-menu-item" href="#">Контакты</a>
       </li>
     </ul>
   </nav>
@@ -85,7 +87,7 @@
 
   <div class="slider-item ">
       <img class="slider-image" src="images\slider-images\slider-1.png" width="560" height="560" alt="Фотография квадрокоптера">
-        <div class="slider-description">
+        <span class="slider-description">
           <span class="slider-current item-number">01</span>
             <div class="description-wrapper">
             <h3 class="slider-description-title">Порхает как бабочка, жалит как пчела!</h3>
@@ -122,7 +124,6 @@
               <dd class="slider-advanteges-description">Радиус поражения</dd>
         </dl>
 
-      </div>
       </div>
   </div>
 
@@ -270,6 +271,7 @@
         </li>
       </ul>
   </section>
+  </div>
 
 <div class="advanteges-background">
 
@@ -278,13 +280,13 @@
 <div class="advanteges-container">
       <h2 class="visually-hidden">Меню сервиса покупки</h2>
         <ul class="advanteges-menu">
-          <li class="advanteges-menu-point">
+          <li>
             <a class="advanteges-link advanteges-link-current button" href="#">Доставка</a>
           </li>
-          <li class="advanteges-menu-point">
+          <li>
             <a class="advanteges-link guarantee-link button" href="#">Гарантия</a>
           </li>
-          <li class="advanteges-menu-point">
+          <li>
             <a class="advanteges-link credit-link button" href="#">Кредит</a>
           </li>
         </ul>
@@ -298,7 +300,7 @@
           мы неплохо заработаем, поднимая его на ваш этаж.
       </p>
     </div>
-        <div class="image-advanteges">
+    <div class="image-advanteges">
           <img src="images/advanteges-image/postman.png" width="136" height="164"alt="Картинка курьера.">
         </div>
 </div>
@@ -326,7 +328,7 @@
 </section>
 </div>
 
-
+<div class="page-container">
 <section class="delivery-exclusive">
     <h2 class="visually-hidden">Доставка редкого товара</h2>
       <a class="delivery-exclusive-link" href="#">
@@ -337,10 +339,6 @@
           <p class="delivery-exclusive exclusive-description">
             Доставим редкий товар под заказ
           </p>
-        <span class="info-svg">
-          <svg aria-hidden="true" focusable="false" width="41" height="40"  fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="20.5" cy="20" r="20" fill="#DCDCDC" fill-opacity=".5"/><g opacity=".3" fill="#000"><path d="M21 14h-2v2h2v-2ZM21 18h-2v8h2v-8Z"/></g>
-          </svg>
-        </span>
       </a>
 </section>
 
@@ -359,7 +357,7 @@
       </ul>
     </p>
 
-    <a class="more-about button" href="#">Подробнее о нас</a>
+    <a class="button" href="#">Подробнее о нас</a>
   </section>
 
   <section class="contacts">
@@ -380,17 +378,17 @@
           <li class="contacts-schedule-item">сб—вс: с 10:00 до 19:00</li>
         </ul>
 
-    <a class="contact-message button" href="#">Напишите нам</a>
+    <a class="button" href="#">Напишите нам</a>
   </section>
 </div>
+ </div>
 
-
-
+<div class="subscription-background">
   <section class="subscription">
     <div class="subscription-text">
       <h2 class="subscription-title">Подпишитесь на рассылку</h2>
         <p class="subscription-description">Еженедельный дайджест с обзорами новинок,
-        длительными тест-драйвами, распаковками, а также акции, спецпредложения и вот это вот всё.
+        длительными тест-драйвами, распаковками, а также акции,спецпредложения и вот это вот всё.
         <p>
     </div>
 
@@ -407,10 +405,11 @@
         <p class="postscript-mark">Это бесплатно</p>
     </div>
   </div>
+</div>
 
   </section>
 
-  </div>
+
 </main>
 
 
@@ -454,21 +453,21 @@
     <h2 class="visually-hidden">Контакты на социальные сети</h2>
     <ul class="footer-social-list">
       <li class="footer-social-item">
-        <a class="button" href="https://www.facebook.com/htmlacademy">
+        <a class="button-social" href="https://www.facebook.com/htmlacademy">
           <svg class="svg-social" aria-hidden="true" focusable="false" width="40" height="40" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="20" cy="20" r="20" fill="#fff" fill-opacity=".3"/><path d="M22.5 14H25v-3h-3.4c-2.8 0-3.6 1.7-3.6 4.2V17h-2v3h2v9h3v-9h3.3l.6-3H21v-1.5c0-.8.3-1.5 1.5-1.5Z" fill="#444"/>
           </svg>
           <span class="visually-hidden">Фейсбук</span>
         </a>
       </li>
       <li class="footer-social-item">
-        <a class="button" href="https://www.instagram.com/htmlacademy/">
+        <a class="button-social" href="https://www.instagram.com/htmlacademy/">
           <svg class="svg-social" aria-hidden="true" focusable="false" width="40" height="40" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="20" cy="20" r="20" fill="#fff" fill-opacity=".3"/><path d="M20 22a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z" fill="#444"/><path d="M26.7 13.3c-.9-.9-2-1.3-3.4-1.3h-6.6c-2.8 0-4.7 1.9-4.7 4.7v6.6c0 1.4.4 2.6 1.4 3.4.9.9 2 1.3 3.3 1.3h6.6c1.4 0 2.6-.4 3.4-1.3.8-.9 1.3-2 1.3-3.4v-6.6c0-1.4-.4-2.6-1.3-3.4ZM20 24.1c-2.2 0-4.1-1.8-4.1-4.1s1.9-4.1 4.1-4.1c2.2 0 4.1 1.8 4.1 4.1s-1.9 4.1-4.1 4.1Zm4.6-7.4c-.7 0-1.3-.5-1.3-1.3s.5-1.3 1.3-1.3c.7 0 1.3.6 1.3 1.3 0 .7-.6 1.3-1.3 1.3Z" fill="#444"/>
           </svg>
           <span class="visually-hidden">Инстаграм</span>
         </a>
       </li>
       <li class="footer-social-item">
-        <a class="button" href="https://twitter.com/htmlacademy_ru">
+        <a class="button-social" href="https://twitter.com/htmlacademy_ru">
           <svg class="svg-social" aria-hidden="true" focusable="false" width="40" height="40" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="20" cy="20" r="20" fill="#fff" fill-opacity=".3"/><path d="M22.7 13.16c1.5-.5 2.6.3 3.2 1.1.5-.2 1.1-.4 1.7-.6 0 .8-.5 1.4-.8 1.6.7.2 1.2-.4 1.2-.4-.1.9-.9 1.7-1.4 1.9-.2 6.3-2.8 10.4-8.9 10.3h-.4c-.3 0-3.7-.4-4.3-1.8 2 .2 3.4-.4 4.1-1.1-.8-.3-2.4-.4-2.6-2.8.3.2.5.3 1.1.2-1.1-.8-2.3-1.5-2.2-3.5.3.3.9.5 1.2.4-.6-.2-1.8-3.1-.8-4.6 1.6 1.7 3.3 3.4 6.3 3.5.2-2.1 1-3.5 2.6-4.2Z" fill="#444"/>
           </svg>
           <span class="visually-hidden">Твиттер</span>
