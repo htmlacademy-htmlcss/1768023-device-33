@@ -55,15 +55,18 @@ body {
   line-height: 30px;
   color: #000000;
   background-color: #ffffff;
+
 }
 
 .main-container{
   flex-grow: 1;
+
 }
 
 .page-container {
   width: 1160px;
   margin: 0 auto;
+  box-sizing: border-box;
 }
 
 .background-color-catalog {
@@ -114,7 +117,7 @@ body {
   background-color: #ffc700;
 }
 
-.button:focus {
+.button:focus-visible {
   outline: 2px solid #AF4FFF;
 }
 
@@ -156,23 +159,23 @@ body {
 
 /* единая стилизация наведения(hover) */
 .page-header .navigation-form a:hover,
-.inner-header .breadcrumbs a:hover,
+.inner-header .breadcrumbs:not(:last-child) a:hover,
 .sorting .popular-option:hover {
   opacity: 0.6;
 }
 
 /* единая стилизация активной ссылки*/
 .page-header .navigation-form a:active,
-.inner-header .breadcrumbs a:active,
+.inner-header .breadcrumbs:not(:last-child) a:active,
 .sorting .popular-option:active {
   opacity: 0.3;
   outline: none;
 }
 
 /* единая стилизация фокуса для меню пользователя */
-.page-header .navigation-form a:focus,
-.inner-header .breadcrumbs-item-link:focus,
-.sorting .popular-option:focus {
+.page-header .navigation-form a:focus-visible,
+.inner-header .breadcrumbs-item-link:focus-visible,
+.sorting .popular-option:focus-visible {
   outline:  2px solid #AF4FFF;
 }
 
@@ -194,8 +197,8 @@ body {
   opacity: 0.3;
   outline: none;
 }
-.logo-page-header-link:focus,
-.logo-page-footer-link:focus {
+.logo-page-header-link:focus-visible,
+.logo-page-footer-link:focus-visible {
   outline:  2px solid #AF4FFF;
 }
 /* стилизация форм поиска и меню пользователя */
@@ -204,7 +207,6 @@ body {
   display: flex;
   margin-bottom: 45px;
   align-items: center;
-
 }
 
 /* форма поиска */
@@ -249,7 +251,7 @@ body {
 .placeholder-text:focus-within {
   display: block;
   outline: 2px solid #AF4FFF;
-  outline-offset: 2px;
+  outline-offset: 1px;
 }
 
 /* не отрабатывает disabled для иконки? */
@@ -268,11 +270,9 @@ body {
   background-color: #000000;
 }
 
-.button-search:focus {
-  display: block;
+.button-search:focus-within {
   outline: 2px solid #AF4FFF;
   outline-offset: 2px;
-
 }
 
 /* когда нажимаешь на клопку в отключенном состоянии, "найти выделяется" */
@@ -429,8 +429,8 @@ body {
 
   width: 16px;
   height: 2px;
-  top: 24px;
-  left: 16px;
+  top: 17px;
+  left: 17px;
 
   opacity: 1;
   display: none;
@@ -446,18 +446,17 @@ body {
 
   width: 16px;
   height: 16px;
-  top: 15px;
-  left: 16px;
-  /* display: none; */
+  top: 17px;
+  left: 17px;
 }
 
-.popover-button:hover,
-.popover-button:active {
+.button-catalog:hover .popover-button,
+.button-catalog:active .popover-button {
   opacity: 1;
 }
 
-.popover-close:hover,
-.popover-close:active {
+.button-catalog:hover .popover-close,
+.button-catalog:active .popover-close{
   opacity: 1;
 }
 
@@ -473,20 +472,24 @@ body {
   opacity: 0.3;
 }
 
-.navigation-list a:focus-within {
+.navigation-list a:focus-visible {
   outline: 2px solid #AF4FFF;
 }
 
 
 
 /*  слайдер */
+.slider {
+  position: relative;
+}
 
 .slider-item:not(.visually-hidden) {
   display: flex;
   position: relative;
   width: 1160px;
   margin: 0 auto;
-  margin-bottom: 212px;
+  align-items: flex-start;
+  margin-bottom: 108px;
 }
 
 /* левая часть слайдера с картинкой */
@@ -494,11 +497,28 @@ body {
   display: block;
   position: relative;
 
-  top: -152px;
+  margin-top: -152px;
   margin-right: 40px;
 }
 
 /* правая часть слайдера с описанием */
+.slider-description {
+  font-family: "Rubik", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 30px;
+  color: #000000;
+  background-color: #ffffff;
+
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+  z-index: 2;
+}
+
 .slider-current {
   font-size: 180px;
   font-weight: 700;
@@ -513,38 +533,84 @@ body {
   width: 250px;
 }
 
-.slider-description {
-  font-family: "Rubik", sans-serif;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 30px;
-  color: #000000;
-  background-color: #ffffff;
-
-  margin-left: 40px;
-  position: relative;
-
-  display: flex;
-  flex-direction: column;
-  padding: 0;
-  margin: 0;
-  z-index: 2;
-}
-
 .description-wrapper {
   display: block;
-  position: relative;
-  top: -31px;
-  bottom: 0;
+  margin-top: -31px;
   margin-bottom: 51px;
+  position: relative;
 }
 
 /* часть после описания товара с ссылками */
 .slider-pagination-wrapper {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 49px;
+  margin-bottom: 59px;
 }
+
+/* стилизация значение-текст */
+
+.characteristic-wrapper {
+  display: flex;
+}
+
+.slider-advanteges {
+  margin-right: 20px;
+}
+
+.slider-advanteges dt {
+  font-size: 36px;
+  margin: 0;
+  margin-bottom: 12px;
+}
+
+.slider-advanteges dd {
+  font-size: 16px;
+  margin: 0;
+  color: #444444;
+}
+/* стилизация стрелочек слайдера */
+.slider-pagination-arrow {
+  position: absolute;
+
+  top: 59px;
+  left: 30px;
+}
+
+.slider-prev {
+  background-image: url("../images/slider-images/arrow-slider.svg");
+  background-repeat: no-repeat;
+
+  height: 60px;
+  width: 20px;
+
+  border: none;
+  background-color: transparent;
+
+  margin-right: 490px;
+}
+
+.slider-next {
+  background-image: url("../images/slider-images/arrow-slider.svg");
+  background-repeat: no-repeat;
+
+  height: 60px;
+  width: 20px;
+
+  border: none;
+  background-color: transparent;
+  transform: scale(-1, 1)
+}
+
+.slider-button:hover {
+  opacity: 0.6;
+}
+.slider-button:active {
+  opacity: 0.3;
+}
+.slider-button:focus-visible {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
+}
+
+/* стилизация пагинации-точек в описании */
 
 .slider-pagination {
   padding: 0;
@@ -552,13 +618,19 @@ body {
   list-style-type: none;
   display: flex;
   align-items: center;
+
+  position: absolute;
+  top: 211px;
+  right: 16px;
+  z-index: 2;
+
 }
  .slider-pagination-item:not(:last-child) {
   margin-right: 20px;
 }
 
 .slider-pagination-button {
-  display: inline-block;
+  display: block;
   padding: 0;
   background: #ffffff;
   width: 12px;
@@ -590,32 +662,18 @@ body {
   text-align: left;
 }
 
-/* стилизация значение-текст */
-
-.characteristic-wrapper {
-  display: flex;
-  margin-bottom: 38px;
+.slider-pagination-button:hover {
+  opacity: 0.6;
 }
-
-.slider-advanteges {
-  margin-right: 20px;
-
+.slider-pagination-button:active {
+  opacity: 0.3;
 }
-
-.slider-advanteges dt {
-  font-size: 36px;
-  margin: 0;
-  margin-bottom: 12px;
-}
-
-.slider-advanteges dd {
-  font-size: 16px;
-  margin: 0;
-  color: #444444;
+.slider-pagination-button:focus-visible {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
 }
 
 /* стилизация ссылок категории товаров */
-
 
 .categoty-list {
   margin-bottom: 70px;
@@ -699,6 +757,7 @@ body {
   font-size: 18px;
   font-weight: 800;
   line-height: 35px;
+  margin: 0 auto;
 
 
   color: inherit;
@@ -709,7 +768,7 @@ body {
 }
 
 
-.advanteges-container::after {
+.advanteges-wrapper::after {
   content: "";
 
   top: 0;
@@ -718,7 +777,7 @@ body {
   height: 319px;
   background-color:#000000;
   position: absolute;
-  left: 268px;
+  left: 280px;
 }
 
 .advanteges-menu {
@@ -743,12 +802,14 @@ body {
   font-size: 18px;
   font-weight: 800;
 
+  width: 160px;
+
   text-align: center;
   color: inherit;
   z-index: 1;
 
   position: relative;
-  padding: 10px 20px 10px;
+  padding: 10px 20px;
   text-decoration: none;
   text-transform: uppercase;
 }
@@ -764,14 +825,14 @@ body {
 }
 
 
-.advanteges-link-current {
+.link-current {
   color: #FFE17F;
   background-color: #000000;
   padding-right: 120px;
 }
 
 
-.advanteges-link-current:hover span {
+.link-current:hover span {
   opacity: 0.5;
 }
 .advanteges-link:active span{
@@ -1049,6 +1110,7 @@ body {
 /* стилизация футера */
 
 .page-footer-container {
+  box-sizing: border-box;
   display: flex;
   width: 1160px;
   margin: 0 auto;
@@ -1157,16 +1219,20 @@ fill-opacity: 0.3;
   margin-left: 390px;
 }
 
-.htmlacademy-link:hover{
-  fill:#FFFFFF;
+.htmlacademy-svg {
+  fill: #FFC700;
 }
 
-.htmlacademy-link:active {
+.htmlacademy-link:hover .htmlacademy-svg {
+  fill: #ffffff;
+}
+
+.htmlacademy-link:active .htmlacademy-svg {
   color:#F0F0F0;
   opacity: 0.3;
 }
 
-.htmlacademy-link:focus {
+.htmlacademy-link:focus .htmlacademy-svg {
   outline: 2px solid #AF4FFF;
 }
 
@@ -1199,7 +1265,7 @@ fill-opacity: 0.3;
   color: inherit;
   text-transform: uppercase;
   text-decoration: none;
-  padding: 4px;
+  padding: 4px 0;
 
   /* position: relative; */
 }
@@ -1365,7 +1431,6 @@ fill-opacity: 0.3;
 /* стилизация сортировки сверху карточек товара */
 .sorting {
   display: flex;
-  /* justify-content: space-between; */
   height: 70px;
   align-items: center;
   padding-left: 40px;
@@ -1380,6 +1445,7 @@ fill-opacity: 0.3;
   font-size: 18px;
   line-height: 30px;
   color: #000000;
+  cursor: pointer;
 }
 .sorting-option .button {
   width: 10px;
@@ -1392,6 +1458,7 @@ fill-opacity: 0.3;
 
 .button-down,
 .button-up {
+  cursor: pointer;
   border: none;
   opacity: 0.3;
   padding-left: 10px;
@@ -1471,7 +1538,6 @@ fill-opacity: 0.3;
   letter-spacing: -0.02em;
 
   margin: 0;
-  /* margin-right: auto; */
   width: 226px;
 }
 
@@ -1487,7 +1553,7 @@ fill-opacity: 0.3;
   position: relative;
 }
 
-.new-product {
+.new-product-mark {
   position: absolute;
   top: 27px;
   right: 27px;
@@ -1498,6 +1564,7 @@ fill-opacity: 0.3;
   height: 60px;
 }
 
+/* кнопка "подробнее" */
 .more-button {
   position: absolute;
   top: 180px;
@@ -1506,23 +1573,25 @@ fill-opacity: 0.3;
   opacity: 0;
 }
 
-
-.product-card-link:hover{
-  opacity: 0.8;
+.product-card-link:hover .product-card-img,
+.product-card-link:hover .product-card-content {
+  opacity: 0.6;
 }
 .product-card-link:hover .more-button {
   opacity: 1.0;
 }
-
 .product-card-link:active .more-button::before {
   background-color: #ffc700
 }
-
+.product-card-link:active .product-card-content {
+  opacity: 0.3;
+}
 .product-card-link:focus-within {
   outline: 2px solid #AF4FFF;
 }
-
-
+.new-product:active .product-card-content {
+  opacity: 0.6;
+}
 
 /* стилизация кнопки "Загрузить ещё"*/
 .pagination-wrapper {
@@ -1576,15 +1645,19 @@ fill-opacity: 0.3;
 }
 
 .pagination-prev {
-  margin: 25px;
-  margin-right: 150px;
-  padding: 0;
+  display: block;
+  padding: 25px 0;
+  width: 128px;
+  margin-right: 145px;
+  box-sizing: border-box;
 }
 
 .pagination-next {
-  margin: 25px;
-  margin-left: 150px;
-  padding: 0;
+  display: block;
+  width: 128px;
+  padding: 25px 0;
+  margin-left: 145px;
+  box-sizing: border-box;
 }
 
 .pagination-link {
@@ -1619,4 +1692,13 @@ fill-opacity: 0.3;
 }
 .pagination-disabled {
   opacity: 0;
+}
+.button-way:hover {
+  background-color: #DCDCDC;
+}
+.button-way:active {
+  opacity: 0.3;
+}
+.button-way:focus-visible {
+  outline: 2px solid #AF4FFF;
 }
