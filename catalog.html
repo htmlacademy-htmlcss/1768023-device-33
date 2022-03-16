@@ -112,44 +112,96 @@
 
     <h2 class="sorting-header header-filter">Фильтр:</h2>
 
-      <form class="filter-product" action="https://echo.htmlacademy.ru/" metod="get">
-        <fieldset class="sorting-filter-group">
-          <legend class="sorting-filter-title">Стоимость</legend>
-            <label class="sorting-filter-coast">
-              <input class="sorting-filter-coast-range" type="range">
+    <form class="filter-product" action="https://echo.htmlacademy.ru/" metod="get">
+      <fieldset class="sorting-filter-group">
+        <legend class="sorting-filter-title">Стоимость</legend>
+
+        <div class="range">
+          <div class="range-scale">
+            <div class="range-bar" style="left: 0; width: 119px;">
+              <button class="range-toggle toggle-min">
+                <span class="visually-hidden">Изменить минимальную цену.</span>
+              </button>
+              <button class="range-toggle toggle-max">
+                 <span class="visually-hidden">Изменить минимальную цену.</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="range-wrapper-inputs">
+            <label class="catalog-filter-label">
+              от <input class="range-input" type="number" value="0" name="min-price">
             </label>
+            <label class="catalog-filter-label">
+              до <input class="range-input" type="number" value="5000" name="max-price">
+            </label>
+          </div>
+        </div>
+      </fieldset>
+
         </fieldset>
 
         <fieldset class="sorting-filter-group">
           <legend class="sorting-filter-title"> Цвет </legend>
-            <label class="product-color">
-            <input class="product-color-item" type="checkbox" name="color" value="black" checked> Черный
-            </label>
-            <label class="product-color">
-              <input class="product-color-item" type="checkbox" name="color" value="white" checked> Белый
-            </label>
-            <label class="product-color">
-              <input class="product-color-item" type="checkbox" name="color" value="dark-blue"> Синий
-            </label>
-            <label class="product-color">
-              <input class="product-color-item" type="checkbox" name="color" value="red"> Красный
-            </label>
-            <label class="product-color">
-              <input class="product-color-item" type="checkbox" name="color" value="pink"> Розовый
-            </label>
+            <ul class="catalog-filter-list">
+              <li class="catalog-filter-item">
+              <label class="control">
+                <input class="control-input visually-hidden" type="checkbox" name="black" value="black" checked>
+                  <span class="control-mark"></span>
+                  <span class="control-label">Черный</span>
+              </label>
+              </li>
+              <li class="catalog-filter-item">
+                <label class="control">
+                  <input class="control-input visually-hidden" type="checkbox" name="white" value="white" checked>
+                    <span class="control-mark"></span>
+                    <span class="control-label">Белый</span>
+                </label>
+              </li>
+              <li class="catalog-filter-item">
+                <label class="control">
+                  <input class="control-input visually-hidden" type="checkbox" name="dark-blue" value="dark-blue">
+                    <span class="control-mark"></span>
+                    <span class="control-label">Синий</span>
+                </label>
+              </li>
+              <li class="catalog-filter-item">
+                <label class="control">
+                  <input class="control-input visually-hidden" type="checkbox" name="red" value="red">
+                    <span class="control-mark"></span>
+                    <span class="control-label">Красный</span>
+                </label>
+              </li>
+              <li class="catalog-filter-item">
+                <label class="control">
+                  <input class="control-input visually-hidden" type="checkbox" name="pink" value="pink">
+                    <span class="control-mark"></span>
+                    <span class="control-label">Розовый</span>
+                </label>
+              </li>
+            </ul>
         </fieldset>
 
         <fieldset class="sorting-filter-group">
           <legend class="sorting-filter-title">Bluetooth</legend>
-            <label class="bluetooth">
-              <input class="bluetooth-input" type="radio" name="bluetooth" value="bluetooth-have" checked>
-                    Есть
-            </label>
-            <label class="bluetooth">
-              <input class="bluetooth-input" type="radio" name="bluetooth" value="bluetooth-not">
-                    Нет
-            </label>
-          </fieldset>
+            <ul class="catalog-filter-list">
+              <li class="catalog-filter-item">
+                <label class="control">
+                  <input class="visually-hidden control-input" type="radio" name="bluetooth" value="bluetooth-have" checked>
+                    <span class="control-mark"></span>
+                    <span class="control-label">Есть</span>
+                </label>
+              </li>
+              <li class="catalog-filter-item">
+                <label class="control">
+                  <input class="visually-hidden control-input" type="radio" name="bluetooth" value="bluetooth-not">
+                    <span class="control-mark"></span>
+                    <span class="control-label">Нет</span>
+                </label>
+              </li>
+            </ul>
+        </fieldset>
+
             <button class="button button-show-filter" type="submit">Показать</button>
     </form>
   </section>

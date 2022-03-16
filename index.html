@@ -53,6 +53,46 @@
           </svg>
         Корзина<span class="visually-hidden">Корзина</span>
         </a>
+
+        <div class="popover popover-cart">
+
+          <div class="popover-content">
+            <h2 class="visually-hidden">Корзина</h2>
+            <ul class="basket-item-list">
+              <li class="popover-basket-item">
+                <a class="popover-basket-link" href="#">
+                  <img class="popover-image" src="images/catalog/catalog-1.jpg" width="39" height="43">
+                  <span class="popover-description">Любительская селфи-палка</span>
+                </a>
+                <button class="popover-delete" type="button">
+                  <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M10 0.909091L9.09091 0L5 4.09091L0.909091 0L0 0.909091L4.09091 5L0 9.09091L0.909091 10L5 5.90909L9.09091 10L10 9.09091L5.90909 5L10 0.909091Z" fill="white"/>
+                  </svg>
+                  <span class="visually-hidden">Удалить из корзины</span>
+                </button>
+              </li>
+              <li class="popover-basket-item">
+                <a class="popover-basket-link" href="#">
+                  <img class="popover-image" src="images/catalog/catalog-2.jpg" width="39" height="43">
+                  <span class="popover-description">Профессиональная селфи-палка</span>
+                </a>
+                <button class="popover-delete" type="button">
+                  <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M10 0.909091L9.09091 0L5 4.09091L0.909091 0L0 0.909091L4.09091 5L0 9.09091L0.909091 10L5 5.90909L9.09091 10L10 9.09091L5.90909 5L10 0.909091Z" fill="white"/>
+                  </svg>
+                  <span class="visually-hidden">Удалить из корзины</span>
+                </button>
+              </li>
+            <div class="popover-results">
+              <span class="count-product">Товаров: 2</span>
+              <span class="price-prodict">Сумма: 2000 &#8381;</span>
+            </div>
+            <button class="button-open-basket">
+              <span>Открыть корзину</span>
+            </button>
+            </ul>
+          </div>
+        </div>
       </li>
     </ul>
   </div>
@@ -63,8 +103,33 @@
           <span class="popover-button popover-close" type="button">
             <span class="visually-hidden">Раскрыть каталог</span>
           </span>
-        </a>
-      </li>
+          <div class="tooltip-wrapper-catalog tooltip-close">
+          <ul class="tooltip-catalog">
+            <li class="tooltip-item">
+              <a class="tooltip-link" href="#">Виртуальная реальность</a>
+            </li>
+            <li class="tooltip-item">
+              <a class="tooltip-link" href="#">Моноподы для селфи</a>
+            </li>
+            <li class="tooltip-item">
+              <a class="tooltip-link" href="#">Экшн камеры</a>
+            </li>
+          </ul>
+          <ul class="tooltip-catalog">
+            <li class="tooltip-item">
+              <a class="tooltip-link" href="#">Фитнес-браслеты</a>
+            </li>
+            <li class="tooltip-item">
+              <a class="tooltip-link" href="#">Умные часы</a>
+            </li>
+          </ul>
+          <ul class="tooltip-catalog">
+            <li class="tooltip-item">
+              <a class="tooltip-link" href="#">Квадрокоптеры</a>
+            </li>
+          </ul>
+        </div>
+
       <li class="header-menu-item">
         <a class="button-menu-item" href="#">Доставка</a>
       </li>
@@ -81,7 +146,7 @@
 <main class="main-container main-index">
 
   <div class="page-container">
-<section class="slider">
+<div class="slider">
   <h1 class="visually-hidden">Девайс</h1>
 
   <div class="slider-item visually-hidden">
@@ -196,7 +261,7 @@
       </button>
     </li>
   </ol>
-</section>
+  </div>
 
 
 
@@ -262,14 +327,14 @@
 <div class="advanteges-container">
       <h2 class="visually-hidden">Меню сервиса покупки</h2>
         <ul class="advanteges-menu">
-          <li>
+          <li >
             <a class="advanteges-link  button" href="#"><span>Доставка</span></a>
           </li>
-          <li>
-            <a class="advanteges-link  link-current button" href="#"><span>Гарантия</span></a>
+          <li >
+            <a class="advanteges-link   button" href="#"><span>Гарантия</span></a>
           </li>
           <li>
-            <a class="advanteges-link   button" href="#"><span>Кредит</span></a>
+            <a class="advanteges-link link-current button" href="#"><span>Кредит</span></a>
           </li>
         </ul>
 </div>
@@ -377,9 +442,9 @@
   <div class="subscription-form">
     <form class="subscription-email" action="https://echo.htmlacademy.ru/" method="post" >
       <label>
-        <input class="subscription-email-adress" type="email" name="email" value="Ваш email">
-          <button class="button" type="submit">Подписаться</button>
-        </label>
+        <input class="subscription-email-adress" type="email" name="email" placeholder="Ваш email">
+      </label>
+      <button class="subscription-button" type="submit"><span>Подписаться</span></button>
     </form>
 
     <div class="postscript">
@@ -465,9 +530,55 @@
 
   </div>
 
+</div>
+
+</footer>
+<!-- modal-container-close -->
+<!-- удалить класс modal-container-close для открытия модального окна -->
+  <div class="modal-container ">
+    <div class="modal modal-delivery">
+      <button class="modal-close-button">
+        <span class="visually-hidden">Закрыть</span>
+      </button>
+      <section class="modal-content">
+        <h2 class="modal-title">Доставка под заказ</h2>
+
+        <form class="delivery-form" action="https://echo.htmlacademy.ru/" method="post">
+          <p class="field-group">
+            <label class="delivery-name-label label" for="delivery-name">Ваше имя:</label>
+              <input class="delivery-form-field form-name " type="text" id="delivery-name" name="delivery-name" placeholder="Введите имя">
+                <span class="bottom-text">Добавьте имя</span>
+          </p>
+
+          <p class="field-group">
+            <label class="delivery-email-label label" for="delivery-emal">Ваш e-mail:</label>
+              <input disabled class="delivery-form-field form-email" type="email" id="delivery-email" name="delivery-email" placeholder="почта">
+                <span class="bottom-text">Забавный у вас адрес</span>
+          </p>
+
+          <div class="product-order">
+          <p class="field-group">
+            <label class="delivery-order-label label" for="delivery-order">Что нужно привезти:</label>
+              <input class="delivery-form-field form-order " type="text" id="delivery-order" name="delivery-order" placeholder="В свободной форме">
+          </p>
+
+          <p class="field-group">
+            <label class="delivery-quantity label" for="quantity-goods">Количество:</label>
+            <span class="quantity-wrapper">
+              <button class="button-quantity button-minus" type="button">
+                  <span class="visually-hidden">Уменьшить</span>
+              </button>
+                <input class="delivery-form-field quantity-form" type="number" id="quantity-goods" name="quantity-goods" min="1" value="1">
+              <button class= "button-quantity button-plus" type="button">
+                  <span class="visually-hidden">Увеличить</span>
+              </button>
+            </span>
+          </p>
+          </div>
+          <button class="button delivery-button">Отправить</button>
+        </form>
+      </section>
+    </div>
   </div>
-
-  </footer>
-
   </body>
 </html>
