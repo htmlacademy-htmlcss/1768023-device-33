@@ -1,0 +1,2405 @@
+@font-face {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 800;
+  src: url("../fonts/raleway/raleway-800.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/rubik/rubik-400.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/rubik/rubik-700.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 800;
+  src: url("../fonts/rubik/rubik-800.woff2") format("woff2");
+  font-display: swap;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  font-family: "Rubik", sans-serif;
+  font-size: 18px;
+  line-height: 30px;
+  color: #000000;
+  background-color: #ffffff;
+
+}
+
+.main-container{
+  flex-grow: 1;
+
+}
+
+.page-container {
+  width: 1160px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.background-color-catalog {
+  background-color: #F0F0F0;
+}
+
+
+.button,
+.more-button {
+  font-family: "Raleway", sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  font-style: normal;
+  line-height: 21px;
+  color: #000000;
+  text-align: center;
+  letter-spacing: 0.2em;
+  text-decoration: none;
+  text-transform: uppercase;
+
+
+  padding: 10px 40px;
+  position: relative;
+}
+
+.button::before,
+.more-button::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 8px;
+  background-color: #FFE17F;
+  z-index: -1;
+  left: 0;
+  top: 16px;
+}
+
+.button:hover::before {
+  width: 100%;
+  height: 100%;
+  top: 0;
+}
+
+.button:active::before {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  background-color: #ffc700;
+}
+
+.button:focus-visible {
+  outline: 2px solid #AF4FFF;
+}
+
+/* вопрос: можно ли сделать ссылку неактивной? */
+.button:disabled {
+  opacity: 0.3;
+  cursor: default;
+  border: none;
+}
+
+.button-menu-item {
+  font-family: "Raleway", sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  font-style: normal;
+  line-height: 21px;
+  color: #000000;
+  text-align: center;
+  letter-spacing: 0.2em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+/* стилизация хэдэра */
+.page-header {
+  background-color: #FFE17F;
+  color: #000000;
+  margin: 0 auto;
+  width: 1040px;
+  margin-top: 40px;
+  padding-left: 60px;
+  padding-right: 60px;
+  padding-bottom: 152px;
+
+  position: relative;
+
+}
+
+
+/* единая стилизация наведения(hover) */
+.page-header .navigation-form a:hover,
+.inner-header .breadcrumbs:not(:last-child) a:hover,
+.sorting .popular-option:hover {
+  opacity: 0.6;
+}
+
+/* единая стилизация активной ссылки*/
+.page-header .navigation-form a:active,
+.inner-header .breadcrumbs:not(:last-child) a:active,
+.sorting .popular-option:active {
+  opacity: 0.3;
+  outline: none;
+}
+
+/* единая стилизация фокуса для меню пользователя */
+.page-header .navigation-form a:focus-visible,
+.inner-header .breadcrumbs-item-link:focus-visible,
+.sorting .popular-option:focus-visible {
+  outline:  2px solid #AF4FFF;
+}
+
+
+
+/* стилизация: логотип хэдэра */
+.logo-page-header-link {
+  width: 146px;
+  position: relative;
+  bottom: 20px;
+}
+
+.logo-page-header-link:hover,
+.logo-page-footer-link:hover  {
+  opacity: 0.6;
+}
+.logo-page-header-link:active,
+.logo-page-footer-link:active {
+  opacity: 0.3;
+  outline: none;
+}
+.logo-page-header-link:focus-visible,
+.logo-page-footer-link:focus-visible {
+  outline:  2px solid #AF4FFF;
+}
+/* стилизация форм поиска и меню пользователя */
+
+.navigation-form {
+  display: flex;
+  margin-bottom: 45px;
+  align-items: center;
+}
+
+/* форма поиска */
+
+.navigation-product-search {
+  display: flex;
+  margin-right: 26px;
+  width: 517px;
+  position: relative;
+}
+
+.search-product-input {
+  border: 2px solid #000000;
+  border-radius: 50px 0 0 50px;
+  width: 359px;
+  padding: 10px 0 10px 48px;
+  background: transparent;
+  cursor: pointer;
+  font-size: 16px;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.search-icon {
+  position: absolute;
+  left: 16px;
+  top: 12px;
+}
+
+.button-search {
+  border: 2px solid #000000;
+  border-left: 0;
+  border-radius: 0 50px 50px 0;
+  width: 160px;
+}
+
+/* состояния поля поиска */
+.search-product-input:active {
+  color: #000000;
+}
+
+.placeholder-text:focus-within {
+  display: block;
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
+}
+
+/* не отрабатывает disabled для иконки? */
+.search-product-input:disabled {
+  opacity: 0.3;
+  cursor: default;
+}
+
+.button-search:hover {
+  color: #ffffff;
+  background-color: #000000;
+}
+
+.button-search:active span {
+  opacity: 0.3;
+  background-color: #000000;
+}
+
+.search-focus:focus-within {
+
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
+}
+
+/* когда нажимаешь на клопку в отключенном состоянии, "найти выделяется" */
+.button-search:disabled {
+  opacity: 0.3;
+  cursor: default;
+  background-color: inherit;
+  color:#000000;
+}
+
+
+/* стилизация навигации меню пользователя */
+.navigation-user {
+  display: flex;
+  flex-grow: 1;
+  flex-wrap: wrap;
+  margin: 0;
+  list-style-type: none;
+  padding: 0;
+  justify-content: space-between;
+}
+
+.navigation-item {
+  position: relative;
+}
+.navigation-user .link-input {
+  padding-right: 150px;
+}
+
+.navigation-user .link-account {
+  padding-right: 0;
+}
+
+.link-exit {
+  opacity: 0.5;
+}
+
+.search-product {
+  font-family: "Rubik", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  color: inherit;
+  background-color: inherit;
+  cursor: pointer;
+}
+
+.navigation-link {
+  font-family: "Rubik", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 30px;
+  color: inherit;
+  background-color: inherit;
+  text-decoration: none;
+
+
+  cursor: pointer;
+  display: block;
+  position: relative;
+}
+
+/* декоративные элементы: иконки меню пользователя */
+
+
+
+.link-input {
+  padding-left: 27px;
+}
+
+
+.link-compare {
+  padding-left: 22px;
+}
+
+.link-basket {
+  padding-left: 44px;
+}
+
+.navigation-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+
+.link-input .navigation-icon {
+  right: 27px;
+  left: 0;
+  margin: auto 0;
+}
+
+.link-compare .navigation-icon {
+  right: 22px;
+  left: 0;
+  margin: auto 0;
+}
+
+.link-basket .navigation-icon {
+  right: 44px;
+  left: 0;
+  margin: auto 0;
+}
+
+/* стилизация поповера */
+.popover-open {
+  display: block;
+}
+.popover {
+  position: absolute;
+  top: 43px;
+  right: -58px;
+  z-index: 1;
+  box-sizing: border-box;
+  width: 320px;
+
+
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+
+  color: #FFFFFF;
+  background-color: #000000;
+
+  display: none;
+}
+
+.popover-content {
+  height: 100%;
+}
+
+.basket-item-list {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.popover-basket-item {
+  border-bottom: 1px solid #1A1A1A;
+  height: 43px;
+  padding: 20px;
+  position: relative;
+}
+
+.popover-basket-link {
+  display: flex;
+  align-items: center;
+
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+/* состояние поповер - ссылки */
+.popover-basket-link:hover,
+.popover-delete:hover {
+  opacity: 0.6;
+}
+.popover-basket-link:active,
+.popover-delete:active {
+  opacity: 0.3;
+}
+.popover-basket-link:focus-visible,
+.popover-delete:focus-visible {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 1px;
+}
+
+.popover-image {
+  display: block;
+  margin-right: 23px;
+}
+
+.popover-description {
+  display: block;
+  margin-right: auto;
+  width: 160px;
+}
+
+.popover-delete {
+  position: absolute;
+
+  width: 18px;
+  height: 17px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  top: 20px;
+  right: 20px;
+}
+
+.popover-results span {
+  display: block;
+}
+.popover-results {
+  display: flex;
+  justify-content: space-between;
+  background-color: #1A1A1A;
+
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: right;
+
+  padding: 20px 20px;
+}
+
+.button-open-basket {
+  width: 280px;
+  height: 50px;
+  background-color: #FFFFFF;
+  color: #000000;
+
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 21px;
+
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+
+  margin: 20px;
+  border: none;
+  cursor: pointer;
+}
+/* состояние кнопки открытия корзины в поповер */
+.button-open-basket:hover {
+  background-color: #FFE17F;
+}
+.button-open-basket:active span {
+  opacity: 0.3;
+}
+.button-open-basket:focus-visible {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
+}
+.button-open-basket:disabled span{
+  opacity: 0.3;
+}
+
+/* каталог с плюсиком и ссылки */
+.navigation-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  align-items: center;
+  position: relative;
+}
+
+
+.navigation-list li:first-child {
+  margin-right: auto;
+}
+
+.header-menu-item:not(:last-child){
+  margin-right: 45px;
+}
+
+
+.button-catalog {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 0;
+}
+
+.popover-button {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  border: 2px solid #000000;
+  background-color: inherit;
+  margin-left: 7px;
+
+  cursor: pointer;
+
+  opacity: 0.3;
+}
+
+.popover-button::after {
+  content: "";
+
+  position: absolute;
+
+  background-image: url("../images/header-icons/minus.svg");
+  background-repeat: no-repeat;
+
+  width: 16px;
+  height: 2px;
+  top: 17px;
+  left: 17px;
+
+  opacity: 1;
+  display: none;
+}
+
+.popover-close::before{
+  content: "";
+
+  position: absolute;
+
+  background-image: url("../images/header-icons/plus.svg");
+  background-repeat: no-repeat;
+
+  width: 16px;
+  height: 16px;
+  top: 17px;
+  left: 17px;
+}
+
+.button-catalog:hover .popover-button,
+.button-catalog:active .popover-button {
+  opacity: 1;
+}
+
+.button-catalog:hover .popover-close,
+.button-catalog:active .popover-close{
+  opacity: 1;
+}
+
+.button-catalog:focus-within {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
+}
+
+.navigation-list li:not(:nth-child(1)):hover {
+  opacity: 0.6;
+}
+.navigation-list li:not(:nth-child(1)):active {
+  opacity: 0.3;
+}
+
+.navigation-list a:focus-visible {
+  outline: 2px solid #AF4FFF;
+}
+
+/* тултип каталога */
+
+
+
+.tooltip-wrapper-catalog {
+  position: absolute;
+  top: 100%;
+  left: -60px;
+  z-index: 1;
+
+  display: flex;
+  box-sizing: border-box;
+  width: 1160px;
+  height: 180px;
+  padding: 14px 0 27px 60px;
+
+  line-height: 34px;
+
+  background-color: #ffe17f;
+}
+.tooltip-close {
+  display: none;
+}
+
+.tooltip-catalog {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+
+  margin-bottom: 26px;
+  margin-right: 56px;
+}
+
+.tooltip-item {
+  margin-bottom: 26px;
+}
+
+.tooltip-link{
+  color: #000000;
+  text-decoration: none;
+}
+.tooltip-link:hover {
+  opacity: 0.6;
+}
+.tooltip-link:active {
+  opacity: 0.3;
+}
+.tooltip-link:focus-visible {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
+}
+/* активный пункт */
+.tooltip-link:hover {
+  border-bottom: 1px solid #000000;
+  opacity: 0.6;
+}
+.tooltip-link:active {
+  border-bottom: 1px solid #000000;
+  opacity: 0.3;
+}
+.tooltip-link:focus-visible {
+  border-bottom: 1px solid #000000;
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
+}
+/*  слайдер */
+.slider {
+  position: relative;
+}
+
+.slider-item:not(.visually-hidden) {
+  display: flex;
+  position: relative;
+  width: 1160px;
+  margin: 0 auto;
+  align-items: flex-start;
+  margin-bottom: 108px;
+}
+
+/* левая часть слайдера с картинкой */
+.slider-image {
+  display: block;
+  position: relative;
+
+  margin-top: -152px;
+  margin-right: 40px;
+}
+
+/* правая часть слайдера с описанием */
+.slider-description {
+  font-family: "Rubik", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 30px;
+  color: #000000;
+  background-color: #ffffff;
+
+  position: relative;
+
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+  z-index: 0;
+}
+
+
+.slider-current {
+  font-size: 180px;
+  font-weight: 700;
+  line-height: 100%;
+  color: #ffffff;
+  text-align: right;
+
+  position: absolute;
+  right: 49px;
+  top: -141px;
+  z-index: -1;
+  width: 250px;
+}
+
+.description-wrapper {
+  display: block;
+  margin-top: -31px;
+  margin-bottom: 51px;
+  position: relative;
+}
+
+/* часть после описания товара с ссылками */
+.slider-pagination-wrapper {
+  margin-bottom: 59px;
+}
+
+/* стилизация значение-текст */
+
+.characteristic-wrapper {
+  display: flex;
+}
+
+.slider-advanteges {
+  margin-right: 20px;
+}
+
+.slider-advanteges dt {
+  font-size: 36px;
+  margin: 0;
+  margin-bottom: 12px;
+}
+
+.slider-advanteges dd {
+  font-size: 16px;
+  margin: 0;
+  color: #444444;
+}
+/* стилизация стрелочек слайдера */
+.slider-pagination-arrow {
+  position: absolute;
+
+  top: 59px;
+  left: 30px;
+}
+
+.slider-prev {
+  background-image: url("../images/slider-images/arrow-slider.svg");
+  background-repeat: no-repeat;
+
+  height: 60px;
+  width: 20px;
+
+  border: none;
+  background-color: transparent;
+
+  margin-right: 490px;
+}
+
+.slider-next {
+  background-image: url("../images/slider-images/arrow-slider.svg");
+  background-repeat: no-repeat;
+
+  height: 60px;
+  width: 20px;
+
+  border: none;
+  background-color: transparent;
+  transform: scale(-1, 1)
+}
+
+.slider-button:hover {
+  opacity: 0.6;
+}
+.slider-button:active {
+  opacity: 0.3;
+}
+.slider-button:focus-visible {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
+}
+
+/* стилизация пагинации-точек в описании */
+
+.slider-pagination {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+
+  position: absolute;
+  top: 211px;
+  right: 16px;
+  z-index: 0;
+
+}
+ .slider-pagination-item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.slider-pagination-button {
+  display: block;
+  padding: 0;
+  background: #ffffff;
+  width: 12px;
+  height: 12px;
+  border: 2px solid #000000;
+
+  border-radius: 50%;
+}
+.button-checked {
+  background: #000000;
+}
+
+.slider-description-title {
+  font-family: "Raleway", sans-serif;
+  font-size: 50px;
+  font-weight: 800;
+  line-height: 50px;
+  color: inherit;
+
+  margin-bottom: 29px;
+  margin-top: 0;
+}
+
+.slider-description-item {
+  color: #444444;
+
+  margin-top: 0;
+  margin-bottom: 0;
+  text-align: left;
+}
+
+.slider-pagination-button:hover {
+  opacity: 0.6;
+}
+.slider-pagination-button:active {
+  opacity: 0.3;
+}
+.slider-pagination-button:focus-visible {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
+}
+
+/* стилизация ссылок категории товаров */
+
+.categoty-list {
+  margin-bottom: 70px;
+  width: 1160px;
+  padding-bottom: 150px;
+}
+
+.categoty-item-link {
+  font-family: "Raleway", sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 24px;
+  color: inherit;
+  text-decoration: none;
+  letter-spacing: -0.02em;
+
+  width: 160px;
+  height: 252px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+
+.category-list-item {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+
+.background-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  width: 160px;
+  height: 160px;
+  margin-bottom: 32px;
+  background-color: #FFE17F;
+}
+
+
+.background-container:hover {
+  background-color: #ffc700;
+}
+
+.categoty-item-link:active {
+  opacity: 0.3;
+}
+
+.categoty-item-link:focus-within {
+  outline: 2px solid #AF4FFF;
+}
+
+
+/* стилизация ссылок возможностей сервиса */
+
+
+.advanteges-background {
+  background-color: #F0F0F0;
+  margin-bottom: 70px;
+
+}
+
+
+.advanteges-wrapper {
+  position: relative;
+  display: flex;
+  width: 1160px;
+  margin: 0 auto;
+  top: -102px;
+}
+
+.advanteges-container {
+  font-family: "Raleway", sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 35px;
+  margin: 0 auto;
+
+
+  color: inherit;
+
+
+  position: relative;
+  width: 280px;
+  border-right: 7px solid #000000;
+}
+
+
+/* .advanteges-wrapper::after {
+  content: "";
+
+  top: 0;
+  bottom: 0;
+  width: 7px;
+  height: 319px;
+  background-color:#000000;
+  position: absolute;
+  left: 280px;
+} */
+
+.advanteges-menu {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+
+  width: 280px;
+
+  padding-top: 64px;
+  padding-bottom: 65px;
+  box-sizing: border-box;
+}
+
+.advanteges-menu li:not(:last-child) {
+  margin-bottom: 35px;
+}
+
+.advanteges-link {
+  font-family: "Raleway", sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+
+  width: 160px;
+
+  text-align: center;
+  color: inherit;
+  z-index: 1;
+
+  position: relative;
+  padding: 10px 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.advanteges-link::before {
+  content: "";
+  position: absolute;
+  height: 8px;
+  background-color: #FFE17F;
+  z-index: -2;
+  left: 0;
+  top: 16px;
+}
+
+
+.link-current {
+  color: #FFE17F;
+  background-color: #000000;
+
+}
+
+
+.link-current:hover span {
+  opacity: 0.5;
+}
+.advanteges-link:active span{
+  opacity: 0.3;
+}
+.advanteges-link:focus {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
+}
+
+/* стилизация описаний возможностей сервиса */
+
+.advanteges-text-container {
+  display: flex;
+  margin-left: 116px;
+
+}
+
+.advanteges-header {
+  font-family: "Raleway", sans-serif;
+  font-size: 50px;
+  font-weight: 800;
+  line-height: 50px;
+  color: inherit;
+  margin: 0;
+
+  display: block;
+  padding-top: 72px;
+  margin-bottom: 34px;;
+}
+
+.advanteges-description {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 30px;
+  color: #444444;
+
+  padding: 0;
+  margin: 0;
+
+}
+
+.image-advanteges {
+  display: block;
+  margin-top: 77px;
+  margin-left: 106px;
+}
+/* стилизации доставки редкого товара */
+
+.delivery-exclusive-link {
+  font-family: "Raleway", sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 23px;
+  color: inherit;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  margin-bottom: 70px;
+  width: 1160px;
+
+
+  background-color: #F0F0F0;
+
+  position: relative;
+}
+
+.deliverycar {
+  display: flex;
+  width: 125px;
+  height: 100px;
+  background-color: #FFE17F;
+  justify-content: center;
+  align-items: center;
+}
+
+.delivery-exclusive-link::after {
+  content: "";
+
+  position: relative;
+  background-image: url("../images/info.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+
+  width: 40px;
+  height: 40px;
+  opacity: 0.3;
+
+  border-radius: 50px;
+  background-color: #DCDCDC;
+
+  right: 40px;
+}
+
+
+
+.delivery-exclusive-link:hover .deliverycar {
+  background-color: #FFC700;
+}
+
+.delivery-exclusive-link:hover::after{
+  opacity: 1.0;
+}
+
+.delivery-exclusive-link:active {
+  opacity: 0.3;
+}
+
+.delivery-exclusive-link:focus {
+  outline: 2px solid #AF4FFF;
+}
+
+/* стилизация блока о возможностях компании */
+
+/* стилизация части о компании */
+
+.index-columns {
+  display: flex;
+  margin-bottom: 70px;
+}
+
+.about {
+  width: 520px;
+  margin-right: 130px;
+}
+
+.about::before {
+  content: "";
+  width: 84px;
+  height: 7px;
+  display: block;
+
+  margin-bottom: 41px;
+
+  background-color: #000000;
+}
+
+.contacts {
+  width: 532px;
+}
+
+.contacts::before {
+  content: "";
+  width: 84px;
+  height: 7px;
+  display: block;
+
+  margin-bottom: 41px;
+
+  background-color: #000000;
+}
+
+.about h2, .contacts h2 {
+  font-family: "Raleway", sans-serif;
+  font-size: 50px;
+  font-weight: 800;
+  line-height: 50px;
+  color: #000000;
+}
+
+.about p, .contacts p {
+  font-style: normal;
+  color: #444444;
+}
+
+.about ul {
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: -0.02em;
+  margin-bottom: 30px;
+  padding-left: 15px;
+
+}
+
+.about li {
+  color: #FFE17F;
+  margin-bottom: 19px;
+}
+
+
+.about span {
+  color: #000000;
+  margin-left: 26px;
+}
+
+.about h3, .contacts h3 {
+  font-style: normal;
+  font-size: 24px;
+  font-weight: 700;
+  color: #444444;
+}
+
+.contacts-phone {
+  color: #444444;;
+  font-style: normal;
+  text-decoration: underline;
+}
+
+.contacts ul {
+  color: #444444;
+}
+
+/* стилизация рассылки */
+.subscription-background {
+  background-color: #F0F0F0;
+}
+
+.subscription {
+  padding-top: 64px;
+
+  display: flex;
+  flex-direction: column;
+  width: 1160px;
+  margin: 0 auto;
+}
+
+.subscription-text {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 144px;
+}
+
+.subscription-title {
+  font-family: "Raleway", sans-serif;
+  font-size: 50px;
+  font-weight: 800;
+  line-height: 50px;
+
+  margin: 0;
+  display: block;
+  margin-right: 252px;
+}
+
+.subscription-description {
+  color: #444444;
+  display: block;
+
+  margin: 0;
+  padding: 0;
+}
+
+.subscription-form {
+  display: flex;
+  margin-bottom: 56px;
+  justify-content: space-between;
+}
+
+.subscription-email {
+  display: flex;
+}
+
+.subscription-email-adress {
+  width: 557px;
+  border: 0;
+  border-bottom: 3px solid #c4c4c4;
+  background-color: transparent;
+  padding-left: 17px;
+  padding-top: 38px;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.subscription-email-adress::placeholder {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+
+
+  color: #444444;
+  opacity: 0.5;
+}
+
+.subscription-button {
+  border: 3px solid #c4c4c4;
+  padding: 18px 39px;
+  box-sizing: border-box;
+  cursor: pointer;
+  height: 57px;
+  width: 252px;
+
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.subscription-button:hover {
+  background-color: #000000;
+  color: #F0F0F0;
+}
+.subscription-button:active span {
+  background-color: #000000;
+  opacity: 0.3;
+}
+.subscription-button:focus-visible {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
+}
+.subscription-button:disabled {
+  opacity: 0.3;
+  cursor: default;
+  background-color: transparent;
+  color: #000000;
+}
+
+.postscript {
+  display: block;
+  color: #444444;
+  position: relative;
+  padding-left: 32px;
+}
+.postscript::after {
+  background-image: url("../images/check-green.svg");
+  background-repeat: no-repeat;
+
+  content: "";
+  position: absolute;
+  top: 27px;
+  left: 0;
+
+  display: block;
+  width: 16px;
+  height: 16px;
+}
+
+/* стилизация футера */
+
+.page-footer-container {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  width: 1160px;
+  margin: 0 auto;
+  padding-bottom: 77px;
+}
+
+.page-footer {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #ffffff;
+  background-color: #444444;
+}
+
+.logo-page-footer-link {
+  display: block;
+  margin-right: auto;
+  margin-bottom: 32px;
+  padding-top: 62px
+}
+
+.footer-content-container {
+  display: flex;
+}
+
+.footer-content {
+  display: block;
+  width: 239px;
+}
+
+.footer-contacts {
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+
+.footer-contacts::before {
+  content: "";
+
+  top: 133px;
+  position: absolute;
+  width: 80px;
+  height: 7px;
+  background-color: #ffc700;
+}
+
+.footer-social-container {
+  display: flex;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+
+.footer-menu-list {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  display: flex;
+}
+.footer-menu-list li:not(:last-child)  {
+  margin-right: 35px;
+}
+
+.footer-contacts-phone{
+  display: block;
+}
+
+
+.footer-social-link {
+  display: flex;
+  margin-top: 62px;
+  justify-content: flex-end;
+}
+
+.footer-social-item:hover .svg-social circle{
+  fill: #ffc700;
+  fill-opacity: 1
+}
+
+.footer-social-item:active .svg-social {
+fill: #FFC700;
+fill-opacity: 0.3;
+}
+
+.footer-social-item:focus-within {
+  outline: 2px solid #af4fff;
+  outline-offset: 2px;
+}
+
+.footer-social-list {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  display: flex;
+
+}
+
+.footer-social-list li:not(:last-child) {
+  margin-right: 15px;
+}
+
+.htmlacademy-link {
+  margin-left: 390px;
+}
+
+.htmlacademy-svg {
+  fill: #FFC700;
+}
+
+.htmlacademy-link:hover .htmlacademy-svg {
+  fill: #ffffff;
+}
+
+.htmlacademy-link:active .htmlacademy-svg {
+  color:#F0F0F0;
+  opacity: 0.3;
+}
+
+.htmlacademy-link:focus .htmlacademy-svg {
+  outline: 2px solid #AF4FFF;
+}
+
+
+.footer-contacts-phone {
+  font-family: "Rubik", sans-serif;
+  font-style: normal;
+  color: inherit;
+  text-decoration-line: underline;
+}
+
+.footer-contacts-phone:hover {
+  color:#FFC700;
+}
+.footer-contacts-phone:active {
+  opacity: 0.3;
+  color:#FFC700;
+}
+.footer-contacts-phone:focus {
+  outline: 2px solid #AF4FFF;
+}
+
+.footer-menu-link {
+  font-family: "Raleway", sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  font-style: normal;
+  line-height: 21px;
+  letter-spacing: 0.2em;
+  color: inherit;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 4px 0;
+
+  /* position: relative; */
+}
+
+.footer-menu-link:hover{
+  color:#ffc700;
+  border-bottom: 2px solid #ffc700;
+}
+
+.footer-menu-link:active {
+  opacity: 0.3;
+  color:#ffc700;
+  border-bottom: 2px solid #ffc700;
+}
+.footer-menu-link:focus {
+  outline: 2px solid #AF4FFF;
+}
+
+/* стилизация каталога */
+
+
+.header-catalog {
+  padding-bottom: 22px;
+  margin-bottom: 35px;
+}
+
+
+/* стилизация заголовка */
+.inner-header-title {
+  font-family: "Raleway", sans-serif;
+  font-size: 50px;
+  font-weight: 800;
+  line-height: 50px;
+  color: inherit;
+}
+
+/* стилизация хлебных крошек */
+.inner-header {
+  display: flex;
+  flex-direction: column;
+  margin-left: 60px;
+  margin-bottom: 35px;
+}
+
+.inner-header-title {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.breadcrumbs {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 19px;
+  color: inherit;
+
+
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.breadcrumbs-item {
+  padding-right: 36px;
+  position: relative;
+}
+
+.breadcrumbs-item-link {
+  text-decoration: none;
+  color: inherit;
+
+}
+
+.breadcrumbs-item::after {
+  content: "";
+  background-image: url("../images/arrow-right.svg");
+  background-repeat: no-repeat;
+
+  bottom: 6px;
+  right: 16px;
+
+  width: 4px;
+  height: 7px;
+  position: absolute;
+}
+
+.breadcrumbs-item:last-child::after {
+  content: none;
+}
+
+.catalog-products {
+  background-color: #F0F0F0;
+}
+
+.catalor-wrapper {
+  display: flex;
+}
+
+/* стилизация фильтрации */
+.sorting-header {
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 19px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+
+.sorting-option {
+  font-family: "Rubik", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 30px;
+}
+
+.header-filter {
+  margin-bottom: 60px;
+  margin-top: 25px;
+}
+
+.sorting-filter {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 320px;
+
+  margin-left: 60px;
+}
+
+.filter-product {
+  margin-right: 60px;
+}
+
+.sorting-filter-group {
+  margin: 0;
+  margin-bottom: 35px;
+  border: 0;
+  padding: 0;
+}
+
+.sorting-filter-title {
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: -0.02em;
+
+  padding: 12px 0;
+  margin-bottom: 20px;
+  width: 100%;
+  border-top: 2px solid #000000;
+}
+
+.sorting-filter-group label {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+}
+
+.button-show-filter {
+  border: 0;
+  position: relative;
+  z-index: 0;
+}
+
+/* стилизация отдельных фильтров */
+.range-scale {
+  position: relative;
+  height: 2px;
+  margin-bottom: 11px;
+  background-color: #DCDCDC;
+}
+.range-bar {
+  position: absolute;
+  height: 2px;
+  background-color: #000000;
+}
+.range-toggle {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  background-color: #EBEBEB;
+  border: 2px solid #000000;
+  border-radius: 50%;
+  cursor: pointer;
+
+  margin-bottom: 7px;
+}
+
+.range-toggle:hover {
+  border-color: rgba(0, 0, 0, 0.5);
+}
+.range-toggle:active {
+  background-color: #000000;
+}
+.range-toggle:focus-visible {
+  outline: 2px solid #AF4FFF;
+}
+
+.toggle-min {
+  top: -7px;
+  left: 0;
+}
+
+.toggle-max {
+  top: -7px;
+  right: -13px;
+}
+
+.range-wrapper-inputs {
+  display: flex;
+}
+
+.catalog-filter-label{
+  display: flex;
+  opacity: 0.3;
+}
+
+.range-input:focus-visible {
+  outline: 2px solid #AF4FFF;
+}
+.range-input {
+  border: none;
+  background-color: transparent;
+  width: 39px;
+  padding: 0 2px;
+  font: inherit;
+  appearance: textfield;
+}
+
+.range-input::-webkit-outer-spin-button,
+.range-input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+.catalog-filter-list {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.catalog-filter-item:not(:last-child) {
+  margin-bottom: 18px;
+}
+
+.control {
+  position: relative;
+  display: block;
+  padding-left: 36px;
+  cursor: pointer;
+}
+
+.control-mark {
+  position: absolute;
+  top: -2px;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #cccccc;
+  box-sizing: border-box;
+}
+
+.control:hover {
+  opacity: 0.6;
+}
+.control:active {
+  opacity: 0.3;
+}
+.control-input:disabled ~ span {
+  opacity: 0.2;
+  cursor: default;
+}
+
+.control-input[type="checkbox"]:checked + .control-mark::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+
+  background-image: url("../images/check-black.svg");
+  background-repeat: no-repeat;
+  top: 3px;
+  left: 3px;
+}
+
+.control-input[type="radio"] + .control-mark {
+  border-radius: 50%;
+}
+
+.control-input[type="radio"]:checked + .control-mark::before {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+
+  top: 4px;
+  left: 4px;
+
+  background-color: #242424;
+  border-radius: 50%;
+}
+
+.control-input:focus-visible + .control-mark::after {
+  content: "";
+  position: absolute;
+
+  width: 20px;
+  height: 20px;
+
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
+
+  top: -2px;
+  left: -2px;
+}
+
+/* стилизация сортировки сверху карточек товара */
+.sorting {
+  display: flex;
+  height: 70px;
+  align-items: center;
+  padding-left: 40px;
+  padding-right: 40px;
+  justify-content: space-between;
+}
+
+.sorting-option {
+  height: 30px;
+  border: none;
+  background: transparent;
+  font-size: 18px;
+  line-height: 30px;
+  color: #000000;
+  cursor: pointer;
+}
+.sorting-option .button {
+  width: 10px;
+  height: 10px;
+}
+
+.sorting-buttons {
+  display: flex;
+}
+
+.button-down,
+.button-up {
+  cursor: pointer;
+  border: none;
+  opacity: 0.3;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.button-down {
+  transform: rotate(180deg);
+}
+
+.button-down:hover,
+.button-up:hover {
+  opacity: 0.6;
+}
+
+.button-down:active,
+.button-up:active {
+  opacity: 1.0;
+  outline: none;
+}
+
+.button-down:focus,
+.button-up:focus {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 1px;
+}
+
+
+
+/* стилизация списка карточек товара */
+.product-catalog-wrapper {
+  background-color: #ffffff;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 70px;
+}
+.catalog-right-column {
+  display: flex;
+  flex-direction: column;
+  width: 840px;
+}
+
+.product-list {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+
+  display: grid;
+  grid-template-columns: repeat(2, 360px);
+  gap: 40px 44px;
+  margin-bottom: 44px;
+}
+
+/* стилизация одной карточки товара */
+.product-card-img {
+  object-fit: contain;
+  margin-bottom: 32px;
+}
+
+.product-card-content {
+  display: flex;
+  align-items: baseline;
+}
+
+.product-card-link {
+  color: inherit;
+  text-decoration: none;
+
+  margin-right: auto;
+  display: block;
+}
+
+.product-card-title {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: -0.02em;
+
+  margin: 0;
+  width: 226px;
+}
+
+.product-card-price {
+  margin-left: auto;
+  line-height: 21px;
+  text-align: right;
+  color: #444444;
+}
+
+/* отметка нового продукта */
+.product-card {
+  position: relative;
+}
+
+.new-product-mark {
+  position: absolute;
+  top: 27px;
+  right: 27px;
+  z-index: 1;
+
+  display: block;
+  width: 60px;
+  height: 60px;
+}
+
+/* кнопка "подробнее" */
+.more-button {
+  position: absolute;
+  top: 180px;
+  right: 75px;
+  z-index: 2;
+  opacity: 0;
+}
+
+.product-card-link:hover .product-card-img,
+.product-card-link:hover .product-card-content {
+  opacity: 0.6;
+}
+.product-card-link:hover .more-button {
+  opacity: 1.0;
+}
+.product-card-link:active .more-button::before {
+  background-color: #ffc700
+}
+.product-card-link:active .product-card-content {
+  opacity: 0.3;
+}
+.product-card-link:focus-within {
+  outline: 2px solid #AF4FFF;
+}
+.new-product:active .product-card-content {
+  opacity: 0.6;
+}
+
+/* стилизация кнопки "Загрузить ещё"*/
+.pagination-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.pagination-load-more {
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 19px;
+  text-align: center;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+
+  width: 760px;
+  background-color: #FFFFFF;
+  border: 3px solid #E5E5E5;
+  margin-bottom: 44px;
+  padding-top: 18px;
+  padding-bottom: 18px;
+}
+
+.pagination-load-more:hover {
+  border: 3px solid #000000
+}
+.pagination-load-more:active {
+  opacity: 0.3;
+  outline: none;
+}
+.pagination-load-more:focus {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
+}
+
+/* стилизация пагинации */
+.pagination {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 760px;
+  height: 71px;
+  color: inherit;
+  background-color: #EBEBEB;
+  margin-bottom: 78px;
+}
+
+.pagination-prev {
+  display: block;
+  padding: 25px 0;
+  width: 128px;
+  margin-right: 145px;
+  box-sizing: border-box;
+}
+
+.pagination-next {
+  display: block;
+  width: 128px;
+  padding: 25px 0;
+  margin-left: 145px;
+  box-sizing: border-box;
+}
+
+.pagination-link {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: center;
+  color: #444444;
+  text-decoration: none;
+
+  display: block;
+  opacity: 0.3;
+  padding: 10px 16px;
+}
+
+/* состояния пагинации */
+/* класс .pagination-current добавляет стилизацию для текущей страницы */
+/* класс .pagination-disabled добавляет отключение ссылок */
+.pagination-link:hover {
+  opacity: 1;
+}
+.pagination-link:active {
+  opacity: 0.1;
+  outline: none;
+}
+.pagination-link:focus {
+  outline: 2px solid #AF4FFF;
+}
+.pagination-current {
+  opacity: 0.6;
+}
+.pagination-disabled {
+  opacity: 0;
+}
+.button-way:hover {
+  background-color: #DCDCDC;
+}
+.button-way:active {
+  opacity: 0.3;
+}
+.button-way:focus-visible {
+  outline: 2px solid #AF4FFF;
+}
+
+
+/* стилизация модального окна */
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(240, 240, 240, 0.9);
+}
+
+.modal {
+  position: relative;
+  margin: auto;
+  padding: 72px 80px;
+  background-color: #ffffff;
+
+}
+
+.modal-container-close {
+  display: none;
+}
+
+.modal-delivery {
+  width: 760px;
+  border: 10px solid #000000;
+  background-color: #ffffff;
+}
+
+.modal-close-button {
+  position: absolute;
+  right: 84px;
+  top: 80px;
+  width: 26px;
+  height: 26px;
+  background-color: inherit;
+  border: none;
+  background-image: url("../images/close.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+
+/* состояния для кнопки закрытия */
+.modal-close-button:hover {
+  opacity: 0.6;
+}
+.modal-close-button:active {
+  opacity: 0.3;
+}
+.modal-close-button:focus-visible {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
+}
+
+.modal-title {
+  margin: 0;
+  margin-bottom: 42px;
+
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 50px;
+  line-height: 50px;
+  color: #000000;
+}
+
+.delivery-form {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.delivery-form .field-group {
+  margin: 0;
+  margin-bottom: 42px;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.field-group:first-child {
+  margin-right: 40px;
+}
+
+.field-group .label {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+
+  letter-spacing: -0.02em;
+  margin-bottom: 14px;
+}
+
+.delivery-form-field {
+  border: 0;
+  background-color: #F0F0F0;
+  font-size: 16px;
+}
+
+.delivery-form-field:hover {
+  background-color: #DCDCDC;
+}
+.delivery-form-field:active::placeholder{
+  color:#000000;
+}
+.delivery-form-field:focus-visible {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
+  z-index: 3;
+}
+.delivery-form-field:invalid,
+.delivery-form-field:invalid span {
+  outline: 2px solid red;
+  color: red;
+}
+.delivery-form-field:disabled {
+  opacity: 0.3;
+}
+
+.form-name,
+.form-email {
+  width: 360px;
+  height: 60px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.form-name::placeholder,
+.form-email::placeholder,
+.form-order::placeholder {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.delivery-name-label,
+.delivery-email-label {
+  position: relative;
+}
+
+.delivery-name-label::after,
+.delivery-email-label::after {
+  content: "";
+  position: absolute;
+  top: 56px;
+  right: 24px;
+
+  width: 15px;
+  height: 12px;
+
+  background-repeat: no-repeat;
+}
+
+.delivery-name-label::after {
+  background-image: url("../images/user-modal.svg");
+}
+.delivery-email-label::after {
+  background-image: url("../images/email-modal.svg");
+}
+
+.product-order {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+.form-order {
+  width: 540px;
+  height: 60px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.quantity-wrapper {
+  display: flex;
+  width: 180px;
+  position: relative;
+}
+
+.quantity-wrapper:invalid {
+  outline: 2px solid red;
+
+}
+.quantity-form {
+  /* position: absolute; */
+  width: 60px;
+  height: 60px;
+  box-sizing: border-box;
+  text-align: center;
+
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.quantity-form::-webkit-outer-spin-button,
+.quantity-form::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+.button-quantity {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  border: 0;
+  cursor: pointer;
+  padding: 30px 30px;
+  margin: 0;
+}
+
+.button-minus::after {
+  content: "";
+  width: 16px;
+  height: 16px;
+
+  position: absolute;
+  background-image: url("../images/header-icons/minus.svg");
+  background-repeat: no-repeat;
+  top: 29px;
+  left: 22px;
+}
+
+.button-plus::after {
+  content: "";
+  width: 16px;
+  height: 16px;
+
+  position: absolute;
+  background-image: url("../images/header-icons/plus.svg");
+  background-repeat: no-repeat;
+  top: 22px;
+  left: 22px;
+}
+
+.button-quantity:hover,
+.button-quantity:hover::after {
+  opacity: 0.6;
+  background-color: #EBEBEB;
+}
+.button-quantity:active::after  {
+  opacity: 0.3;
+}
+.button-quantity:focus-visible {
+  outline: 2px solid #AF4FFF;
+  z-index: 3;
+}
+
+.delivery-button {
+  z-index: 1;
+  background-color: transparent;
+  border: none;
+}
