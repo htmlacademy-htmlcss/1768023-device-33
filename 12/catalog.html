@@ -12,7 +12,7 @@
   <header class="page-header header-catalog">
 
     <a class="logo-page-header-link" href="index.html" title="Переход на главную страницу.">
-      <img src="images\device-logo.svg" width="145" height="36" alt="Логотип Device.">
+      <img src="images/device-logo.svg" width="145" height="36" alt="Логотип Device.">
     </a>
 
 
@@ -21,7 +21,7 @@
     <form class="navigation-product-search" action="https://echo.htmlacademy.ru/" method="get">
       <label class="placeholder-text">
         <input class="search-product  search-product-input"  type="text" name="search" placeholder="Поиск по сайту" autocomplete="off">
-          <svg class="search-icon" aria-hidden="true" focusable="false" width="16" height="17" aria-hidden="true"  focusable="false" fill="inherit" xmlns="http://www.w3.org/2000/svg">
+          <svg class="search-icon" aria-hidden="true" focusable="false" width="16" height="17" fill="inherit" xmlns="http://www.w3.org/2000/svg">
             <path d="m15.7 14.69-3.1-3.1c.9-1.2 1.4-2.6 1.4-4.2 0-3.9-3.1-7-7-7s-7 3.1-7 7 3.1 7 7 7c1.6 0 3-.5 4.2-1.4l3.1 3.1c.2.2.4.3.7.3.6 0 1-.4 1-1 0-.2-.1-.5-.3-.7ZM2 7.39c0-2.8 2.2-5 5-5s5 2.2 5 5-2.2 5-5 5-5-2.2-5-5Z" fill="#000"/>
           </svg>
       </label>
@@ -66,9 +66,9 @@
  <ul class="navigation-list">
       <li class="header-menu-item">
         <a class="button button-catalog" href="catalog.html">Каталог товаров
-          <button class="popover-button popover-close" type="button">
+          <span class="popover-button popover-close">
             <span class="visually-hidden">Раскрыть каталог</span>
-          </button>
+          </span>
         </a>
       </li>
       <li class="header-menu-item">
@@ -113,17 +113,17 @@
 
     <h2 class="sorting-header header-filter">Фильтр:</h2>
 
-    <form class="filter-product" action="https://echo.htmlacademy.ru/" metod="get">
+    <form class="filter-product" action="https://echo.htmlacademy.ru/" method="get">
       <fieldset class="sorting-filter-group">
         <legend class="sorting-filter-title">Стоимость</legend>
 
         <div class="range">
           <div class="range-scale">
             <div class="range-bar" style="left: 0; width: 119px;">
-              <button class="range-toggle toggle-min">
+              <button class="range-toggle toggle-min" type="button">
                 <span class="visually-hidden">Изменить минимальную цену.</span>
               </button>
-              <button class="range-toggle toggle-max">
+              <button class="range-toggle toggle-max" type="button">
                  <span class="visually-hidden">Изменить минимальную цену.</span>
               </button>
             </div>
@@ -139,8 +139,6 @@
           </div>
         </div>
       </fieldset>
-
-        </fieldset>
 
         <fieldset class="sorting-filter-group">
           <legend class="sorting-filter-title"> Цвет </legend>
@@ -206,6 +204,7 @@
             <button class="button button-show-filter" type="submit">Показать</button>
     </form>
   </section>
+    </div>
 
 
   <div class="catalog-right-column">
@@ -218,11 +217,11 @@
   </select>
 
   <div class="sorting-option sorting-buttons">
-      <button class="button-up">
+      <button class="button-up" type="button">
         <svg aria-hidden="true" focusable="false" width="12" height="10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="m6 0 5.5 10H.5" fill="#000"/>
         </svg>
       </button>
-      <button class="button-down">
+      <button class="button-down" type="button">
         <svg aria-hidden="true" focusable="false" width="12" height="10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="m6 0 5.5 10H.5" fill="#000"/>
         </svg>
       </button>
@@ -236,7 +235,7 @@
 <section class="product-conteiner">
     <ul class="product-list">
       <li class="product-card">
-        <a class="product-card-link new-product" href="product.html">
+        <a class="product-card-link new-product" href="#">
         <span class="new-product-mark">
           <svg aria-hidden="true" focusable="false" width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
               <circle cx="30" cy="30" r="29" stroke="black" stroke-opacity="0.6" stroke-width="2"/>
@@ -253,7 +252,7 @@
       </li>
 
       <li class="product-card">
-        <a class="product-card-link " href="product.html">
+        <a class="product-card-link " href="#">
         <span class="new-product visually-hidden">
           <svg aria-hidden="true" focusable="false" width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
               <circle cx="30" cy="30" r="29" stroke="black" stroke-opacity="0.6" stroke-width="2"/>
@@ -270,7 +269,7 @@
       </li>
 
       <li class="product-card">
-        <a class="product-card-link" href="product.html">
+        <a class="product-card-link" href="#">
         <span class="new-product visually-hidden">
           <svg aria-hidden="true" focusable="false" width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
               <circle cx="30" cy="30" r="29" stroke="black" stroke-opacity="0.6" stroke-width="2"/>
@@ -287,7 +286,7 @@
       </li>
 
       <li class="product-card">
-        <a class="product-card-link" href="product.html">
+        <a class="product-card-link" href="#">
         <span class="new-product visually-hidden">
           <svg aria-hidden="true" focusable="false" width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
               <circle cx="30" cy="30" r="29" stroke="black" stroke-opacity="0.6" stroke-width="2"/>
@@ -339,14 +338,11 @@
 </div>
 </main>
 
-
-
-
  <footer class="page-footer">
 
   <div class="page-footer-container">
 
-    <a class="logo-page-footer-link" href="#index.html" title="Перейти наверх главной страницы.">
+    <a class="logo-page-footer-link" href="index.html" title="Перейти наверх главной страницы.">
       <img src="images/logo-footer.svg" width="145" height="36" alt="Логотип Device.">
     </a>
 
