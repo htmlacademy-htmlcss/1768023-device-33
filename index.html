@@ -56,7 +56,8 @@
         Корзина<span class="visually-hidden">Корзина</span>
         </a>
 
-        <div class="popover popover-cart">
+<!-- чтобы закрыть поповер, нужно добавить класс popover-close-basket -->
+        <div class="popover popover-cart popover-close-basket">
 
           <div class="popover-content">
             <h2 class="visually-hidden">Корзина</h2>
@@ -102,11 +103,12 @@
 
     <ul class="navigation-list">
       <li class="header-menu-item">
-        <a class="button button-catalog" href="catalog.html">Каталог товаров
+        <a class="button-menu-item button-catalog" href="catalog.html">Каталог товаров
           <span class="popover-button popover-close">
             <span class="visually-hidden">Раскрыть каталог</span>
           </span>
         </a>
+<!-- чтобы открыть выпадающее меню, нужно удалить класс tooltip-close -->
           <div class="tooltip-wrapper-catalog tooltip-close">
           <ul class="tooltip-catalog">
             <li class="tooltip-item">
@@ -164,8 +166,8 @@
               </p>
             </div>
 
-        <div class="slider-pagination-wrapper">
-          <a class="slider-item-detiled button" href="#">Подробнее</a>
+        <div class="slider-item-detiled">
+          <a class=" button" href="#">Подробнее</a>
         </div>
 
       <div class="characteristic-wrapper">
@@ -193,8 +195,8 @@
               </p>
           </div>
 
-    <div class="slider-pagination-wrapper">
-      <a class="slider-item-detiled button" href="#">Подробнее</a>
+    <div class="slider-item-detiled">
+      <a class=" button" href="#">Подробнее</a>
     </div>
 
     <div class="characteristic-wrapper">
@@ -217,8 +219,8 @@
                 </p>
           </div>
 
-      <div class="slider-pagination-wrapper">
-        <a class="slider-item-detiled button" href="#">Подробнее</a>
+      <div class="slider-item-detiled">
+        <a class=" button" href="#">Подробнее</a>
     </div>
 
       <div class="characteristic-wrapper">
@@ -283,7 +285,7 @@
         </li>
         <li class="category-list-image">
           <a class="categoty-item-link" href="#">
-            <span class="background-container">
+            <span class="background-container monopode-img">
               <img src="images/category-images/monopode.png" width="86" height="117" alt="Моноподы для селфи.">
                 </span>
                 Моноподы<br> для селфи
@@ -333,14 +335,14 @@
 <div class="advanteges-container">
       <h2 class="visually-hidden">Меню сервиса покупки</h2>
         <ul class="advanteges-menu">
-          <li >
-            <a class="advanteges-link button" href="#"><span>Доставка</span></a>
+          <li>
+            <a class="advanteges-link link-current button" href="#"><span>Доставка</span></a>
           </li>
-          <li >
+          <li>
             <a class="advanteges-link button" href="#"><span>Гарантия</span></a>
           </li>
           <li>
-            <a class="advanteges-link link-current button" href="#"><span>Кредит</span></a>
+            <a class="advanteges-link  button" href="#"><span>Кредит</span></a>
           </li>
         </ul>
 </div>
@@ -391,13 +393,14 @@
 <section class="delivery-exclusive">
     <h2 class="visually-hidden">Доставка редкого товара</h2>
       <a class="delivery-exclusive-link" href="#">
-        <span class="deliverycar">
+        <div class="deliverycar">
           <svg aria-hidden="true" focusable="false" width="47" height="31" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="m46.7 15.4-6.5-8.2c-.3-.4-.7-.6-1.2-.6h-8.3V1.5C30.7.7 30 0 29.2 0H1.5C.7 0 0 .7 0 1.5S.7 3 1.5 3h26.2v21.7H15.8a4.7 4.7 0 0 0-4.5-3.3 4.9 4.9 0 0 0-4.8 4.8c0 2.6 2.2 4.8 4.8 4.8 2.1 0 3.9-1.4 4.5-3.3h13.4c.8 0 1.5-.7 1.5-1.5V9.6h7.6l5.7 7.3v7.9h-2.2a4.7 4.7 0 0 0-4.5-3.3 4.9 4.9 0 0 0-4.8 4.8c0 2.6 2.1 4.8 4.8 4.8 2.1 0 3.9-1.4 4.5-3.3h3.7c.8 0 1.5-.7 1.5-1.5v-9.9c0-.4-.1-.7-.3-1ZM11.3 28c-1 0-1.8-.8-1.8-1.8s.8-1.8 1.8-1.8 1.8.8 1.8 1.8-.9 1.8-1.8 1.8Zm26.1 0c-1 0-1.8-.8-1.8-1.8s.8-1.8 1.8-1.8 1.8.8 1.8 1.8-.9 1.8-1.8 1.8Z" fill="#000"/><path d="M19.4 9.6c.8 0 1.5-.7 1.5-1.5s-.7-1.5-1.5-1.5H4.8c-.8 0-1.5.7-1.5 1.5S4 9.6 4.8 9.6h14.6ZM17.7 14.7c0-.8-.7-1.5-1.5-1.5H1.5c-.8 0-1.5.7-1.5 1.5s.7 1.5 1.5 1.5h14.7c.8 0 1.5-.7 1.5-1.5Z" fill="#000"/>
           </svg>
-        </span>
+        </div>
           <p class="delivery-exclusive exclusive-description">
             Доставим редкий товар под заказ
           </p>
+        <div class="info-icon"><span class="visually-hidden">Доставка редкого товара</span></div>
       </a>
 </section>
 
@@ -411,25 +414,25 @@
         Мы можем доставить ваш товар в самые отдалённые уголки России транспортными компаниями:
       </p>
       <ul>
-        <li><span> Меловые линии </span> </li>
-        <li><span> СДИК </span> </li>
-        <li><span> ТоксБерри </span> </li>
+        <li class="transport-company"><span> Меловые линии </span> </li>
+        <li class="transport-company"><span> СДИК </span> </li>
+        <li class="transport-company"><span> ТоксБерри </span> </li>
       </ul>
 
 
-    <a class="button" href="#">Подробнее о нас</a>
+    <a class="button button-about" href="#">Подробнее о нас</a>
   </section>
 
   <section class="contacts">
     <h2>Контакты</h2>
-      <p>Вы можете забрать товар сами, заехав в наш офис.
+      <p>Вы можете забрать товар сами, заехав в наш офис.<br>
         Заодно сможете проверить работоспособность покупки. </p>
 
       <address class="contacts-adress">
-        <p>Интернет-магазин «Девайс»</p>
+        <h3>Интернет-магазин «Девайс»</h3>
           <p>Санкт-Петербург, набережная реки Карповки, 5, литера П.
           </p>
-            <a class="contacts-phone" href="tel:+7812812-12-12">+7(812)812-12-12</a>
+            <a class="contacts-phone" href="tel:+7812812-12-12">+7 (812) 812-12-12</a>
       </address>
 
       <h3>Время работы</h3>
@@ -438,7 +441,7 @@
           <li class="contacts-schedule-item">сб—вс: с 10:00 до 19:00</li>
         </ul>
 
-    <a class="button" href="#">Напишите нам</a>
+    <a class="button button-contacts" href="#">Напишите нам</a>
   </section>
 </div>
  </div>
@@ -446,10 +449,10 @@
 <div class="subscription-background">
   <section class="subscription">
     <div class="subscription-text">
-      <h2 class="subscription-title">Подпишитесь на рассылку</h2>
-        <p class="subscription-description">Еженедельный дайджест с обзорами новинок,
-        длительными тест-драйвами, распаковками, а также акции,спецпредложения и вот это вот всё.
-        <p>
+      <h3 class="subscription-title">Подпишитесь на рассылку</h3>
+        <p class="subscription-description">Еженедельный дайджест с обзорами новинок,<br>
+        длительными тест-драйвами, распаковками, а также акции, спецпредложения и вот это вот всё.
+        </p>
     </div>
 
   <div class="subscription-form">
@@ -488,7 +491,7 @@
       <p class="footer-contacts">Санкт-Петербург, набережная реки Карповки, 5, литера П.</p>
   </div>
 
-  <div class="footer-social-container">
+  <div class="footer-menu-list-container">
     <ul class="footer-menu-list">
       <li class="footer-menu-item">
         <a class="footer-menu-link" href="#">Доставка</a>
@@ -501,6 +504,7 @@
       </li>
     </ul>
   </div>
+
 
   <div class="footer-contacts-container">
     <a class="footer-contacts-phone" href="tel:+7812812-12-12">Тел.: +7 (812) 812-12-12</a>
@@ -548,7 +552,7 @@
 </footer>
 
 <!-- удалить класс modal-container-close для открытия модального окна -->
-  <div class="modal-container modal-container-close ">
+  <div class="modal-container  modal-container-close">
     <div class="modal modal-delivery">
       <button class="modal-close-button" type="button">
         <span class="visually-hidden">Закрыть</span>
@@ -557,6 +561,7 @@
         <h2 class="modal-title">Доставка под заказ</h2>
 
         <form class="delivery-form" action="https://echo.htmlacademy.ru/" method="post">
+
           <p class="field-group">
               <input class="delivery-form-field form-name " type="text" id="delivery-name" name="delivery-name" placeholder="Введите имя">
                 <label class="delivery-name-label label" for="delivery-name">Ваше имя:</label>
@@ -564,10 +569,11 @@
           </p>
 
           <p class="field-group">
-              <input  class="delivery-form-field form-email"  type="email" id="delivery-email" name="delivery-email" placeholder="почта">
+              <input  class="delivery-form-field form-email" type="email" id="delivery-email" name="delivery-email" placeholder="почта">
                 <label class="delivery-email-label label" for="delivery-email">Ваш e-mail:</label>
                 <span class="bottom-text">Забавный у вас адрес</span>
           </p>
+
 
           <div class="product-order">
           <p class="field-group">
@@ -576,8 +582,8 @@
           </p>
 
           <p class="field-group">
-            <span class="form-label">
-              <label class="delivery-quantity label" for="quantity-goods">Количество:</label>
+
+              <label class="delivery-quantity label" for="quantity-goods">Количество:
               <span class="quantity-tooltip">
                 <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label">
                   <span class="visually-hidden">Посмотреть информацию</span>
@@ -586,7 +592,8 @@
 к провозу багажа.
                   </span>
               </span>
-            </span>
+              </label>
+
             <span class="quantity-wrapper">
               <button class="button-quantity button-minus" type="button">
                   <span class="visually-hidden">Уменьшить</span>
@@ -598,8 +605,8 @@
             </span>
           </p>
           </div>
-          <button class="button delivery-button" type="button">Отправить</button>
         </form>
+        <button class="button delivery-button" type="button">Отправить</button>
       </section>
     </div>
   </div>

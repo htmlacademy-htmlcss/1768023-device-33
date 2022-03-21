@@ -115,12 +115,12 @@
     <h2 class="sorting-header header-filter">Фильтр:</h2>
 
     <form class="filter-product" action="https://echo.htmlacademy.ru/" method="get">
-      <fieldset class="sorting-filter-group">
-        <legend class="sorting-filter-title">Стоимость</legend>
+      <fieldset class="sorting-filter-group ">
+        <legend class="sorting-filter-title sorting-range">Стоимость</legend>
 
         <div class="range">
           <div class="range-scale">
-            <div class="range-bar" style="left: 0; width: 119px;">
+            <div class="range-bar" style="left: 0; width: 119px; top: -2px">
               <button class="range-toggle toggle-min" type="button">
                 <span class="visually-hidden">Изменить минимальную цену.</span>
               </button>
@@ -313,23 +313,26 @@
       <li class="pagination-item">
         <a class="pagination-prev button button-way" href="#">Назад</a>
       </li>
-      <li class="pagination-item">
-        <a class="pagination-link pagination-current" href="#">1</a>
-      </li>
-      <li class="pagination-item">
-        <a class="pagination-link" href="#" >2</a>
-      </li>
-      <li class="pagination-item">
-        <a class="pagination-link" href="#">3</a>
-      </li>
-      <li class="pagination-item">
-        <a class="pagination-link" href="#">...</a>
-      </li>
-      <li class="pagination-item">
-        <a class="pagination-link" href="#">15</a>
-      </li>
+      <ol class="pagination-number-list">
+        <li class="pagination-item">
+          <a class="pagination-link pagination-current" href="#">1</a>
+        </li>
+        <li class="pagination-item">
+          <a class="pagination-link" href="#" >2</a>
+        </li>
+        <li class="pagination-item">
+          <a class="pagination-link" href="#">3</a>
+        </li>
+        <li class="pagination-item">
+          <a class="pagination-link" href="#">...</a>
+        </li>
+        <li class="pagination-item">
+          <a class="pagination-link" href="#">15</a>
+        </li>
+      </ol>
       <li class="pagination-item">
         <a class="pagination-next button button-way" href="#">Вперед</a>
+      </li>
     </ol>
   </div>
   </div>
